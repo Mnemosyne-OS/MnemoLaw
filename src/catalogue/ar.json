@@ -1,0 +1,261 @@
+{
+  "country": "ar",
+  "source": "legalize-dev/legalize-ar",
+  "commit": "3d2450b5c09aafcdd59a085360a5c7ec19b65205",
+  "commitDate": "2026-10-03",
+  "scanned": 31326,
+  "entries": [
+    {
+      "path": "ar/LEY-24430.md",
+      "identifier": "LEY-24430",
+      "label": "Constitución de la Nación Argentina",
+      "reference": "Ley 24.430",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 88277
+    },
+    {
+      "path": "ar/LEY-17285.md",
+      "identifier": "LEY-17285",
+      "label": "Código Aeronáutico",
+      "reference": "Ley 17.285",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 138413
+    },
+    {
+      "path": "ar/LEY-26994.md",
+      "identifier": "LEY-26994",
+      "label": "Código Civil y Comercial de la Nación",
+      "reference": "Ley 26.994",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 1281270
+    },
+    {
+      "path": "ar/DEC-456-1997.md",
+      "identifier": "DEC-456-1997",
+      "label": "Código de Minería",
+      "reference": "Decreto 456/1997",
+      "rank": "decreto",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 186575
+    },
+    {
+      "path": "ar/DEC-2135-1983.md",
+      "identifier": "DEC-2135-1983",
+      "label": "Código Electoral Nacional",
+      "reference": "Decreto 2135/1983",
+      "rank": "decreto",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 123237
+    },
+    {
+      "path": "ar/LEY-11179.md",
+      "identifier": "LEY-11179",
+      "label": "Código Penal",
+      "reference": "Ley 11.179",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 126887
+    },
+    {
+      "path": "ar/LEY-17454.md",
+      "identifier": "LEY-17454",
+      "label": "Código Procesal Civil y Comercial de la Nación",
+      "reference": "Ley 17.454",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 525088
+    },
+    {
+      "path": "ar/LEY-23984.md",
+      "identifier": "LEY-23984",
+      "label": "Código Procesal Penal de la Nación",
+      "reference": "Ley 23.984",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 399368
+    },
+    {
+      "path": "ar/DEC-118-2019.md",
+      "identifier": "DEC-118-2019",
+      "label": "Código Procesal Penal Federal",
+      "reference": "Decreto 118/2019",
+      "rank": "decreto",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 299753
+    },
+    {
+      "path": "ar/LEY-24522.md",
+      "identifier": "LEY-24522",
+      "label": "Ley de Concursos y Quiebras",
+      "reference": "Ley 24.522",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 257892
+    },
+    {
+      "path": "ar/DEC-390-1976.md",
+      "identifier": "DEC-390-1976",
+      "label": "Ley de Contrato de Trabajo",
+      "reference": "Decreto 390/1976",
+      "rank": "decreto",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 155734
+    },
+    {
+      "path": "ar/LEY-24240.md",
+      "identifier": "LEY-24240",
+      "label": "Ley de Defensa del Consumidor",
+      "reference": "Ley 24.240",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 77575
+    },
+    {
+      "path": "ar/LEY-23737.md",
+      "identifier": "LEY-23737",
+      "label": "Ley de Estupefacientes",
+      "reference": "Ley 23.737",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 41608
+    },
+    {
+      "path": "ar/DEC-824-2019.md",
+      "identifier": "DEC-824-2019",
+      "label": "Ley de Impuesto a las Ganancias",
+      "reference": "Decreto 824/2019",
+      "rank": "decreto",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 391506
+    },
+    {
+      "path": "ar/LEY-20094.md",
+      "identifier": "LEY-20094",
+      "label": "Ley de la Navegación",
+      "reference": "Ley 20.094",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 334639
+    },
+    {
+      "path": "ar/LEY-25871.md",
+      "identifier": "LEY-25871",
+      "label": "Ley de Migraciones",
+      "reference": "Ley 25.871",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 116687
+    },
+    {
+      "path": "ar/DEC-821-1998.md",
+      "identifier": "DEC-821-1998",
+      "label": "Ley de Procedimiento Tributario",
+      "reference": "Decreto 821/1998",
+      "rank": "decreto",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 233259
+    },
+    {
+      "path": "ar/LEY-25326.md",
+      "identifier": "LEY-25326",
+      "label": "Ley de Protección de Datos Personales",
+      "reference": "Ley 25.326",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 43344
+    },
+    {
+      "path": "ar/LEY-26485.md",
+      "identifier": "LEY-26485",
+      "label": "Ley de Protección Integral a las Mujeres",
+      "reference": "Ley 26.485",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 66021
+    },
+    {
+      "path": "ar/LEY-26061.md",
+      "identifier": "LEY-26061",
+      "label": "Ley de Protección Integral de Niñas, Niños y Adolescentes",
+      "reference": "Ley 26.061",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 62624
+    },
+    {
+      "path": "ar/LEY-24557.md",
+      "identifier": "LEY-24557",
+      "label": "Ley de Riesgos del Trabajo",
+      "reference": "Ley 24.557",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 121610
+    },
+    {
+      "path": "ar/LEY-24449.md",
+      "identifier": "LEY-24449",
+      "label": "Ley de Tránsito",
+      "reference": "Ley 24.449",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 152120
+    },
+    {
+      "path": "ar/LEY-19550.md",
+      "identifier": "LEY-19550",
+      "label": "Ley General de Sociedades",
+      "reference": "Ley 19.550",
+      "rank": "ley",
+      "lastUpdated": null,
+      "textState": null,
+      "bytes": 254572
+    }
+  ],
+  "packs": [
+    {
+      "rank": "decreto",
+      "files": 21597,
+      "bytes": 170308578
+    },
+    {
+      "rank": "ley",
+      "files": 8079,
+      "bytes": 102253300
+    },
+    {
+      "rank": "decreto_necesidad_urgencia",
+      "files": 1058,
+      "bytes": 18129266
+    },
+    {
+      "rank": "decreto_ley",
+      "files": 592,
+      "bytes": 5994022
+    }
+  ]
+}

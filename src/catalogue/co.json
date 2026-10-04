@@ -1,0 +1,381 @@
+{
+  "country": "co",
+  "source": "legalize-dev/legalize-co",
+  "commit": "c25da5b1a507dd681b6704334e284d2e60f8e6d3",
+  "commitDate": "2026-09-05T00:00:00Z",
+  "scanned": 71900,
+  "entries": [
+    {
+      "path": "co/CONSTITUCION-POLITICA-CP-1991.md",
+      "identifier": "CONSTITUCION-POLITICA-CP-1991",
+      "label": "Constitución Política de 1991",
+      "reference": null,
+      "rank": "constitucion_politica",
+      "lastUpdated": "2025-02-05",
+      "textState": null,
+      "bytes": 479173
+    },
+    {
+      "path": "co/LEY-84-1873.md",
+      "identifier": "LEY-84-1873",
+      "label": "Código Civil",
+      "reference": "Ley 84 de 1873",
+      "rank": "ley",
+      "lastUpdated": "2025-07-08",
+      "textState": null,
+      "bytes": 801509
+    },
+    {
+      "path": "co/LEY-115-1994.md",
+      "identifier": "LEY-115-1994",
+      "label": "Código de la Educación",
+      "reference": "Ley 115 de 1994",
+      "rank": "ley",
+      "lastUpdated": "2025-07-15",
+      "textState": null,
+      "bytes": 178890
+    },
+    {
+      "path": "co/LEY-1098-2006.md",
+      "identifier": "LEY-1098-2006",
+      "label": "Código de la Infancia y la Adolescencia",
+      "reference": "Ley 1098 de 2006",
+      "rank": "ley",
+      "lastUpdated": "2025-08-07",
+      "textState": null,
+      "bytes": 231977
+    },
+    {
+      "path": "co/LEY-685-2001.md",
+      "identifier": "LEY-685-2001",
+      "label": "Código de Minas",
+      "reference": "Ley 685 de 2001",
+      "rank": "ley",
+      "lastUpdated": "2021-01-24",
+      "textState": null,
+      "bytes": 224949
+    },
+    {
+      "path": "co/LEY-1437-2011.md",
+      "identifier": "LEY-1437-2011",
+      "label": "Código de Procedimiento Administrativo y de lo Contencioso Administrativo",
+      "reference": "Ley 1437 de 2011",
+      "rank": "ley",
+      "lastUpdated": "2022-12-29",
+      "textState": null,
+      "bytes": 391718
+    },
+    {
+      "path": "co/LEY-600-2000.md",
+      "identifier": "LEY-600-2000",
+      "label": "Código de Procedimiento Penal",
+      "reference": "Ley 600 de 2000",
+      "rank": "ley",
+      "lastUpdated": "2010-07-11",
+      "textState": null,
+      "bytes": 388933
+    },
+    {
+      "path": "co/LEY-906-2004.md",
+      "identifier": "LEY-906-2004",
+      "label": "Código de Procedimiento Penal",
+      "reference": "Ley 906 de 2004",
+      "rank": "ley",
+      "lastUpdated": "2025-07-10",
+      "textState": null,
+      "bytes": 468139
+    },
+    {
+      "path": "co/LEY-94-1938.md",
+      "identifier": "LEY-94-1938",
+      "label": "Código de Procedimiento Penal",
+      "reference": "Ley 94 de 1938",
+      "rank": "ley",
+      "lastUpdated": "1974-12-19",
+      "textState": null,
+      "bytes": 280289
+    },
+    {
+      "path": "co/DECRETO-1222-1986.md",
+      "identifier": "DECRETO-1222-1986",
+      "label": "Código de Régimen Departamental",
+      "reference": "Decreto 1222 de 1986",
+      "rank": "decreto",
+      "lastUpdated": "2021-08-23",
+      "textState": null,
+      "bytes": 167677
+    },
+    {
+      "path": "co/DECRETO-1333-1986.md",
+      "identifier": "DECRETO-1333-1986",
+      "label": "Código de Régimen Municipal",
+      "reference": "Decreto 1333 de 1986",
+      "rank": "decreto",
+      "lastUpdated": "2019-05-24",
+      "textState": null,
+      "bytes": 185649
+    },
+    {
+      "path": "co/LEY-4-1913.md",
+      "identifier": "LEY-4-1913",
+      "label": "Código de Régimen Político y Municipal",
+      "reference": "Ley 4 de 1913",
+      "rank": "ley",
+      "lastUpdated": "2000-01-25",
+      "textState": null,
+      "bytes": 145044
+    },
+    {
+      "path": "co/DECRETO-410-1971.md",
+      "identifier": "DECRETO-410-1971",
+      "label": "Código del Comercio",
+      "reference": "Decreto 410 de 1971",
+      "rank": "decreto",
+      "lastUpdated": "2026-07-08",
+      "textState": null,
+      "bytes": 882181
+    },
+    {
+      "path": "co/LEY-1123-2007.md",
+      "identifier": "LEY-1123-2007",
+      "label": "Código Disciplinario del Abogado",
+      "reference": "Ley 1123 de 2007",
+      "rank": "ley",
+      "lastUpdated": "2022-03-28",
+      "textState": null,
+      "bytes": 66983
+    },
+    {
+      "path": "co/DECRETO-2241-1986.md",
+      "identifier": "DECRETO-2241-1986",
+      "label": "Código Electoral",
+      "reference": "Decreto 2241 de 1986",
+      "rank": "decreto",
+      "lastUpdated": "2023-04-19",
+      "textState": null,
+      "bytes": 119360
+    },
+    {
+      "path": "co/LEY-28-1979.md",
+      "identifier": "LEY-28-1979",
+      "label": "Código Electoral",
+      "reference": "Ley 28 de 1979",
+      "rank": "ley",
+      "lastUpdated": "1985-11-20",
+      "textState": null,
+      "bytes": 135060
+    },
+    {
+      "path": "co/LEY-1564-2012.md",
+      "identifier": "LEY-1564-2012",
+      "label": "Código General del Proceso",
+      "reference": "Ley 1564 de 2012",
+      "rank": "ley",
+      "lastUpdated": "2026-04-01",
+      "textState": null,
+      "bytes": 830029
+    },
+    {
+      "path": "co/LEY-1242-2008.md",
+      "identifier": "LEY-1242-2008",
+      "label": "Código Nacional de Navegación y Actividades Portuarias Fluviales",
+      "reference": "Ley 1242 de 2008",
+      "rank": "ley",
+      "lastUpdated": "2019-11-21",
+      "textState": null,
+      "bytes": 69574
+    },
+    {
+      "path": "co/LEY-769-2002.md",
+      "identifier": "LEY-769-2002",
+      "label": "Código Nacional del Tránsito Terrestre",
+      "reference": "Ley 769 de 2002",
+      "rank": "ley",
+      "lastUpdated": "2025-07-15",
+      "textState": null,
+      "bytes": 243231
+    },
+    {
+      "path": "co/LEY-599-2000.md",
+      "identifier": "LEY-599-2000",
+      "label": "Código Penal",
+      "reference": "Ley 599 de 2000",
+      "rank": "ley",
+      "lastUpdated": "2026-07-30",
+      "textState": null,
+      "bytes": 467164
+    },
+    {
+      "path": "co/LEY-1407-2010.md",
+      "identifier": "LEY-1407-2010",
+      "label": "Código Penal Militar",
+      "reference": "Ley 1407 de 2010",
+      "rank": "ley",
+      "lastUpdated": "2016-06-12",
+      "textState": null,
+      "bytes": 948038
+    },
+    {
+      "path": "co/LEY-9-1979.md",
+      "identifier": "LEY-9-1979",
+      "label": "Código Sanitario Nacional",
+      "reference": "Ley 9 de 1979",
+      "rank": "ley",
+      "lastUpdated": "2019-11-21",
+      "textState": null,
+      "bytes": 197371
+    },
+    {
+      "path": "co/DECRETO-2663-1950.md",
+      "identifier": "DECRETO-2663-1950",
+      "label": "Código Sustantivo del Trabajo",
+      "reference": "Decreto 2663 de 1950",
+      "rank": "decreto",
+      "lastUpdated": "2019-01-29",
+      "textState": null,
+      "bytes": 308811
+    },
+    {
+      "path": "co/LEY-1563-2012.md",
+      "identifier": "LEY-1563-2012",
+      "label": "Estatuto de Arbitraje Nacional e Internacional",
+      "reference": "Ley 1563 de 2012",
+      "rank": "ley",
+      "lastUpdated": "2014-07-29",
+      "textState": null,
+      "bytes": 115495
+    },
+    {
+      "path": "co/DECRETO-52-1987.md",
+      "identifier": "DECRETO-52-1987",
+      "label": "Estatuto de Carrera Judicial",
+      "reference": "Decreto 52 de 1987",
+      "rank": "decreto",
+      "lastUpdated": "1988-03-15",
+      "textState": null,
+      "bytes": 70975
+    },
+    {
+      "path": "co/LEY-1480-2011.md",
+      "identifier": "LEY-1480-2011",
+      "label": "Estatuto del Consumidor",
+      "reference": "Ley 1480 de 2011",
+      "rank": "ley",
+      "lastUpdated": "2025-02-09",
+      "textState": null,
+      "bytes": 129778
+    },
+    {
+      "path": "co/LEY-80-1993.md",
+      "identifier": "LEY-80-1993",
+      "label": "Estatuto General de Contratación de la Administración Pública",
+      "reference": "Ley 80 de 1993",
+      "rank": "ley",
+      "lastUpdated": "2023-10-24",
+      "textState": null,
+      "bytes": 133665
+    },
+    {
+      "path": "co/DECRETO-1730-1991.md",
+      "identifier": "DECRETO-1730-1991",
+      "label": "Estatuto Orgánico del Sistema Financiero",
+      "reference": "Decreto 1730 de 1991",
+      "rank": "decreto",
+      "lastUpdated": "1992-12-29",
+      "textState": null,
+      "bytes": 717416
+    },
+    {
+      "path": "co/DECRETO-663-1993.md",
+      "identifier": "DECRETO-663-1993",
+      "label": "Estatuto Orgánico del Sistema Financiero",
+      "reference": "Decreto 663 de 1993",
+      "rank": "decreto",
+      "lastUpdated": "2026-02-23",
+      "textState": null,
+      "bytes": 881607
+    },
+    {
+      "path": "co/DECRETO-624-1989.md",
+      "identifier": "DECRETO-624-1989",
+      "label": "Estatuto Tributario",
+      "reference": "Decreto 624 de 1989",
+      "rank": "decreto",
+      "lastUpdated": "2026-03-12",
+      "textState": null,
+      "bytes": 1498093
+    },
+    {
+      "path": "co/DECRETO-2150-1995.md",
+      "identifier": "DECRETO-2150-1995",
+      "label": "Por el cual se suprimen y reforman regulaciones, procedimientos o trámites innecesarios existentes en la Administración Pública",
+      "reference": "Decreto 2150 de 1995",
+      "rank": "decreto",
+      "lastUpdated": "2017-08-03",
+      "textState": null,
+      "bytes": 112390
+    },
+    {
+      "path": "co/LEY-99-1993.md",
+      "identifier": "LEY-99-1993",
+      "label": "por la cual se crea el Ministerio del Medio Ambiente, se reordena el Sector Público encargado de la gestión y conservación del medio ambiente y los recursos naturales renovables, se organiza el Sistema Nacional Ambiental, SINA, y se dictan otras disposiciones",
+      "reference": "Ley 99 de 1993",
+      "rank": "ley",
+      "lastUpdated": "2026-02-23",
+      "textState": null,
+      "bytes": 218777
+    },
+    {
+      "path": "co/LEY-100-1993.md",
+      "identifier": "LEY-100-1993",
+      "label": "Por la cual se crea el sistema de seguridad social integral y se dictan otras disposiciones",
+      "reference": "Ley 100 de 1993",
+      "rank": "ley",
+      "lastUpdated": "2025-06-17",
+      "textState": null,
+      "bytes": 368444
+    },
+    {
+      "path": "co/LEY-1474-2011.md",
+      "identifier": "LEY-1474-2011",
+      "label": "por la cual se dictan normas orientadas a fortalecer los mecanismos de prevención, investigación y sanción de actos de corrupción y la efectividad del control de la gestión pública",
+      "reference": "Ley 1474 de 2011",
+      "rank": "ley",
+      "lastUpdated": "2024-09-18",
+      "textState": null,
+      "bytes": 158080
+    }
+  ],
+  "packs": [
+    {
+      "rank": "decreto",
+      "files": 54239,
+      "bytes": 374143421
+    },
+    {
+      "rank": "ley",
+      "files": 9503,
+      "bytes": 110815517
+    },
+    {
+      "rank": "acto_legislativo",
+      "files": 33,
+      "bytes": 253218
+    },
+    {
+      "rank": "resolucion",
+      "files": 11,
+      "bytes": 77078
+    },
+    {
+      "rank": "constitucion_politica",
+      "files": 1,
+      "bytes": 479173
+    },
+    {
+      "rank": "instruccion",
+      "files": 1,
+      "bytes": 2585
+    }
+  ]
+}

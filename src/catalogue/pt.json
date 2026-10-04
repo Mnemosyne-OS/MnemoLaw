@@ -1,0 +1,476 @@
+{
+  "country": "pt",
+  "source": "legalize-dev/legalize-pt",
+  "commit": "14a6e69a94470b5d604a21be01625604826edce0",
+  "commitDate": "2026-09-28T00:00:00Z",
+  "scanned": 164431,
+  "entries": [
+    {
+      "path": "pt/1976/DRE-1976-502635.md",
+      "identifier": "DRE-1976-502635",
+      "label": "Constituição da República Portuguesa",
+      "reference": null,
+      "rank": "decreto-aprovacao-constituicao",
+      "lastUpdated": "2005-08-17",
+      "textState": null,
+      "bytes": 232547
+    },
+    {
+      "path": "pt/1966/DRE-1966-47344-477358.md",
+      "identifier": "DRE-1966-47344-477358",
+      "label": "Código Civil",
+      "reference": "Decreto-Lei n.º 47344",
+      "rank": "decreto-lei",
+      "lastUpdated": "2026-07-01",
+      "textState": null,
+      "bytes": 1069395
+    },
+    {
+      "path": "pt/2013/DRE-2013-72-499526.md",
+      "identifier": "DRE-2013-72-499526",
+      "label": "Código da Estrada",
+      "reference": "Lei n.º 72/2013",
+      "rank": "lei",
+      "lastUpdated": "2025-04-11",
+      "textState": null,
+      "bytes": 293083
+    },
+    {
+      "path": "pt/2004/DRE-2004-53-538423.md",
+      "identifier": "DRE-2004-53-538423",
+      "label": "Código da Insolvência e da Recuperação de Empresas",
+      "reference": "Decreto-Lei n.º 53/2004",
+      "rank": "decreto-lei",
+      "lastUpdated": "2024-11-10",
+      "textState": null,
+      "bytes": 385502
+    },
+    {
+      "path": "pt/1986/DRE-1986-262-220107.md",
+      "identifier": "DRE-1986-262-220107",
+      "label": "Código das Sociedades Comerciais",
+      "reference": "Decreto-Lei n.º 262/86",
+      "rank": "decreto-lei",
+      "lastUpdated": "2024-01-04",
+      "textState": null,
+      "bytes": 704322
+    },
+    {
+      "path": "pt/2003/DRE-2003-100-446475.md",
+      "identifier": "DRE-2003-100-446475",
+      "label": "Código de Justiça Militar",
+      "reference": "Lei n.º 100/2003",
+      "rank": "lei",
+      "lastUpdated": "2004-09-14",
+      "textState": null,
+      "bytes": 105862
+    },
+    {
+      "path": "pt/1999/DRE-1999-433-692261.md",
+      "identifier": "DRE-1999-433-692261",
+      "label": "Código de Procedimento e de Processo Tributário",
+      "reference": "Decreto-Lei n.º 433/99",
+      "rank": "decreto-lei",
+      "lastUpdated": "2025-07-01",
+      "textState": null,
+      "bytes": 318319
+    },
+    {
+      "path": "pt/2013/DRE-2013-41-497406.md",
+      "identifier": "DRE-2013-41-497406",
+      "label": "Código de Processo Civil",
+      "reference": "Lei n.º 41/2013",
+      "rank": "lei",
+      "lastUpdated": "2025-10-22",
+      "textState": null,
+      "bytes": 884341
+    },
+    {
+      "path": "pt/1999/DRE-1999-480-683065.md",
+      "identifier": "DRE-1999-480-683065",
+      "label": "Código de Processo do Trabalho",
+      "reference": "Decreto-Lei n.º 480/99",
+      "rank": "decreto-lei",
+      "lastUpdated": "2024-11-10",
+      "textState": null,
+      "bytes": 199881
+    },
+    {
+      "path": "pt/2002/DRE-2002-15-280920.md",
+      "identifier": "DRE-2002-15-280920",
+      "label": "Código de Processo nos Tribunais Administrativos",
+      "reference": "Lei n.º 15/2002",
+      "rank": "lei",
+      "lastUpdated": "2026-12-01",
+      "textState": null,
+      "bytes": 249144
+    },
+    {
+      "path": "pt/1987/DRE-1987-78-662562.md",
+      "identifier": "DRE-1987-78-662562",
+      "label": "Código de Processo Penal",
+      "reference": "Decreto-Lei n.º 78/87",
+      "rank": "decreto-lei",
+      "lastUpdated": "2026-09-01",
+      "textState": null,
+      "bytes": 507898
+    },
+    {
+      "path": "pt/1985/DRE-1985-63-326921.md",
+      "identifier": "DRE-1985-63-326921",
+      "label": "Código do Direito de Autor e dos Direitos Conexos",
+      "reference": "Decreto-Lei n.º 63/85",
+      "rank": "decreto-lei",
+      "lastUpdated": "2023-07-04",
+      "textState": null,
+      "bytes": 252754
+    },
+    {
+      "path": "pt/1999/DRE-1999-150-571194.md",
+      "identifier": "DRE-1999-150-571194",
+      "label": "Código do Imposto do Selo",
+      "reference": "Lei n.º 150/99",
+      "rank": "lei",
+      "lastUpdated": "2025-07-01",
+      "textState": null,
+      "bytes": 125202
+    },
+    {
+      "path": "pt/2014/DRE-2014-2-571007.md",
+      "identifier": "DRE-2014-2-571007",
+      "label": "Código do IRC",
+      "reference": "Lei n.º 2/2014",
+      "rank": "lei",
+      "lastUpdated": "2026-01-01",
+      "textState": null,
+      "bytes": 413187
+    },
+    {
+      "path": "pt/2014/DRE-2014-82-E-66022085.md",
+      "identifier": "DRE-2014-82-E-66022085",
+      "label": "Código do IRS",
+      "reference": "Lei n.º 82-E/2014",
+      "rank": "lei",
+      "lastUpdated": "2026-06-08",
+      "textState": null,
+      "bytes": 524528
+    },
+    {
+      "path": "pt/2015/DRE-2015-4-66041468.md",
+      "identifier": "DRE-2015-4-66041468",
+      "label": "Código do Procedimento Administrativo",
+      "reference": "Decreto-Lei n.º 4/2015",
+      "rank": "decreto-lei",
+      "lastUpdated": "2023-02-11",
+      "textState": null,
+      "bytes": 215379
+    },
+    {
+      "path": "pt/1995/DRE-1995-131-521238.md",
+      "identifier": "DRE-1995-131-521238",
+      "label": "Código do Registo Civil",
+      "reference": "Decreto-Lei n.º 131/95",
+      "rank": "decreto-lei",
+      "lastUpdated": "2025-04-02",
+      "textState": null,
+      "bytes": 252543
+    },
+    {
+      "path": "pt/1986/DRE-1986-403-221517.md",
+      "identifier": "DRE-1986-403-221517",
+      "label": "Código do Registo Comercial",
+      "reference": "Decreto-Lei n.º 403/86",
+      "rank": "decreto-lei",
+      "lastUpdated": "2024-04-04",
+      "textState": null,
+      "bytes": 141358
+    },
+    {
+      "path": "pt/1984/DRE-1984-224-591313.md",
+      "identifier": "DRE-1984-224-591313",
+      "label": "Código do Registo Predial",
+      "reference": "Decreto-Lei n.º 224/84",
+      "rank": "decreto-lei",
+      "lastUpdated": "2026-04-16",
+      "textState": null,
+      "bytes": 187129
+    },
+    {
+      "path": "pt/2009/DRE-2009-7-602073.md",
+      "identifier": "DRE-2009-7-602073",
+      "label": "Código do Trabalho",
+      "reference": "Lei n.º 7/2009",
+      "rank": "lei",
+      "lastUpdated": "2025-04-26",
+      "textState": null,
+      "bytes": 666610
+    },
+    {
+      "path": "pt/2008/DRE-2008-18-248178.md",
+      "identifier": "DRE-2008-18-248178",
+      "label": "Código dos Contratos Públicos",
+      "reference": "Decreto-Lei n.º 18/2008",
+      "rank": "decreto-lei",
+      "lastUpdated": "2025-10-28",
+      "textState": null,
+      "bytes": 641520
+    },
+    {
+      "path": "pt/1999/DRE-1999-486-682983.md",
+      "identifier": "DRE-1999-486-682983",
+      "label": "Código dos Valores Mobiliários",
+      "reference": "Decreto-Lei n.º 486/99",
+      "rank": "decreto-lei",
+      "lastUpdated": "2025-12-27",
+      "textState": null,
+      "bytes": 968658
+    },
+    {
+      "path": "pt/1995/DRE-1995-48-185720.md",
+      "identifier": "DRE-1995-48-185720",
+      "label": "Código Penal",
+      "reference": "Decreto-Lei n.º 48/95",
+      "rank": "decreto-lei",
+      "lastUpdated": "2026-09-01",
+      "textState": null,
+      "bytes": 434339
+    },
+    {
+      "path": "pt/1981/DRE-1981-37-564050.md",
+      "identifier": "DRE-1981-37-564050",
+      "label": "Lei da Nacionalidade",
+      "reference": "Lei n.º 37/81",
+      "rank": "lei",
+      "lastUpdated": "2026-05-19",
+      "textState": null,
+      "bytes": 32654
+    },
+    {
+      "path": "pt/2014/DRE-2014-35-25676932.md",
+      "identifier": "DRE-2014-35-25676932",
+      "label": "Lei Geral do Trabalho em Funções Públicas",
+      "reference": "Lei n.º 35/2014",
+      "rank": "lei",
+      "lastUpdated": "2025-01-01",
+      "textState": null,
+      "bytes": 493103
+    },
+    {
+      "path": "pt/2006/DRE-2006-6-693853.md",
+      "identifier": "DRE-2006-6-693853",
+      "label": "Novo Regime do Arrendamento Urbano",
+      "reference": "Lei n.º 6/2006",
+      "rank": "lei",
+      "lastUpdated": "2023-10-07",
+      "textState": null,
+      "bytes": 205589
+    },
+    {
+      "path": "pt/1992/DRE-1992-298-448953.md",
+      "identifier": "DRE-1992-298-448953",
+      "label": "Regime Geral das Instituições de Crédito",
+      "reference": "Decreto-Lei n.º 298/92",
+      "rank": "decreto-lei",
+      "lastUpdated": "2025-12-28",
+      "textState": null,
+      "bytes": 1173435
+    },
+    {
+      "path": "pt/1999/DRE-1999-555-655682.md",
+      "identifier": "DRE-1999-555-655682",
+      "label": "Regime Jurídico da Urbanização e Edificação",
+      "reference": "Decreto-Lei n.º 555/99",
+      "rank": "decreto-lei",
+      "lastUpdated": "2026-08-03",
+      "textState": null,
+      "bytes": 251499
+    },
+    {
+      "path": "pt/2013/DRE-2013-75-500023.md",
+      "identifier": "DRE-2013-75-500023",
+      "label": "Regime Jurídico das Autarquias Locais",
+      "reference": "Lei n.º 75/2013",
+      "rank": "lei",
+      "lastUpdated": "2024-03-01",
+      "textState": null,
+      "bytes": 168084
+    },
+    {
+      "path": "pt/2007/DRE-2007-9-522807.md",
+      "identifier": "DRE-2007-9-522807",
+      "label": "Regulamento Geral do Ruído",
+      "reference": "Decreto-Lei n.º 9/2007",
+      "rank": "decreto-lei",
+      "lastUpdated": "2007-08-06",
+      "textState": null,
+      "bytes": 53766
+    }
+  ],
+  "packs": [
+    {
+      "rank": "decreto-lei",
+      "files": 1598,
+      "bytes": 95830739
+    },
+    {
+      "rank": "portaria",
+      "files": 1234,
+      "bytes": 33872673
+    },
+    {
+      "rank": "lei",
+      "files": 515,
+      "bytes": 50494337
+    },
+    {
+      "rank": "resolucao-conselho-ministros",
+      "files": 296,
+      "bytes": 6800896
+    },
+    {
+      "rank": "decreto-regulamentar",
+      "files": 69,
+      "bytes": 3117444
+    },
+    {
+      "rank": "decreto-presidente-republica",
+      "files": 36,
+      "bytes": 156040
+    },
+    {
+      "rank": "aviso",
+      "files": 34,
+      "bytes": 143639
+    },
+    {
+      "rank": "resolucao-assembleia-republica",
+      "files": 31,
+      "bytes": 1566126
+    },
+    {
+      "rank": "decreto",
+      "files": 29,
+      "bytes": 1344289
+    },
+    {
+      "rank": "despacho-normativo",
+      "files": 25,
+      "bytes": 360333
+    },
+    {
+      "rank": "lei-organica",
+      "files": 14,
+      "bytes": 824566
+    },
+    {
+      "rank": "regulamento-cmvm",
+      "files": 12,
+      "bytes": 942097
+    },
+    {
+      "rank": "declaracao",
+      "files": 12,
+      "bytes": 34607
+    },
+    {
+      "rank": "mapa-oficial",
+      "files": 10,
+      "bytes": 72144
+    },
+    {
+      "rank": "declaracao-retificacao",
+      "files": 9,
+      "bytes": 84859
+    },
+    {
+      "rank": "acordao-supremo-tribunal-justica",
+      "files": 8,
+      "bytes": 707615
+    },
+    {
+      "rank": "edital",
+      "files": 8,
+      "bytes": 147715
+    },
+    {
+      "rank": "despacho",
+      "files": 6,
+      "bytes": 119514
+    },
+    {
+      "rank": "declaracao-rectificacao",
+      "files": 5,
+      "bytes": 83650
+    },
+    {
+      "rank": "acordao-tribunal-constitucional",
+      "files": 4,
+      "bytes": 128327
+    },
+    {
+      "rank": "decreto-governo",
+      "files": 3,
+      "bytes": 31947
+    },
+    {
+      "rank": "regulamento",
+      "files": 3,
+      "bytes": 322915
+    },
+    {
+      "rank": "resolucao",
+      "files": 2,
+      "bytes": 13767
+    },
+    {
+      "rank": "aviso-banco-portugal",
+      "files": 2,
+      "bytes": 19867
+    },
+    {
+      "rank": "regimento-assembleia-republica",
+      "files": 2,
+      "bytes": 563402
+    },
+    {
+      "rank": "deliberacao",
+      "files": 2,
+      "bytes": 23955
+    },
+    {
+      "rank": "decreto-aprovacao-constituicao",
+      "files": 1,
+      "bytes": 232547
+    },
+    {
+      "rank": "regimento",
+      "files": 1,
+      "bytes": 13067
+    },
+    {
+      "rank": "acordo-colectivo-trabalho",
+      "files": 1,
+      "bytes": 68803
+    },
+    {
+      "rank": "acordao-tribunal-contas",
+      "files": 1,
+      "bytes": 3605
+    },
+    {
+      "rank": "diretiva",
+      "files": 1,
+      "bytes": 5562
+    },
+    {
+      "rank": "aviso-extrato",
+      "files": 1,
+      "bytes": 2721
+    },
+    {
+      "rank": "decreto-representante-republica-para-regiao-autonoma-madeira",
+      "files": 1,
+      "bytes": 2713
+    }
+  ]
+}

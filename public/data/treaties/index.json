@@ -1,0 +1,182 @@
+{
+  "country": "int",
+  "builtOn": "2026-10-04",
+  "entries": [
+    {
+      "path": "treaties/ihl/geneva-ap1.md",
+      "identifier": "int-geneva-ap1",
+      "label": "Additional Protocol I (international armed conflicts)",
+      "reference": "IHL, 1977",
+      "lastUpdated": "2026-10-04",
+      "group": "ihl"
+    },
+    {
+      "path": "treaties/ihl/geneva-ap3.md",
+      "identifier": "int-geneva-ap3",
+      "label": "Additional Protocol III (red crystal emblem)",
+      "reference": "IHL, 2005",
+      "lastUpdated": "2026-10-04",
+      "group": "ihl"
+    },
+    {
+      "path": "treaties/un/un-charter.md",
+      "identifier": "int-un-charter",
+      "label": "Charter of the United Nations",
+      "reference": "UN, 1945",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/cat.md",
+      "identifier": "int-cat",
+      "label": "Convention against Torture",
+      "reference": "UN, 1984",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/cedaw.md",
+      "identifier": "int-cedaw",
+      "label": "Convention on discrimination against women (CEDAW)",
+      "reference": "UN, 1979",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/crc.md",
+      "identifier": "int-crc",
+      "label": "Convention on the Rights of the Child",
+      "reference": "UN, 1989",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/eu/eu-charter.md",
+      "identifier": "int-eu-charter",
+      "label": "EU Charter of Fundamental Rights",
+      "reference": "EU, 2000",
+      "lastUpdated": "2026-10-04",
+      "group": "eu"
+    },
+    {
+      "path": "treaties/ihl/geneva-1.md",
+      "identifier": "int-geneva-1",
+      "label": "First Geneva Convention (wounded and sick soldiers)",
+      "reference": "IHL, 1949",
+      "lastUpdated": "2026-10-04",
+      "group": "ihl"
+    },
+    {
+      "path": "treaties/ihl/geneva-4.md",
+      "identifier": "int-geneva-4",
+      "label": "Fourth Geneva Convention (civilians)",
+      "reference": "IHL, 1949",
+      "lastUpdated": "2026-10-04",
+      "group": "ihl"
+    },
+    {
+      "path": "treaties/un/iccpr.md",
+      "identifier": "int-iccpr",
+      "label": "International Covenant on Civil and Political Rights",
+      "reference": "UN, 1966",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/icescr.md",
+      "identifier": "int-icescr",
+      "label": "International Covenant on Economic, Social and Cultural Rights",
+      "reference": "UN, 1966",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/coe/istanbul.md",
+      "identifier": "int-istanbul",
+      "label": "Istanbul Convention (violence against women)",
+      "reference": "COE, 2011",
+      "lastUpdated": "2026-10-04",
+      "group": "coe"
+    },
+    {
+      "path": "treaties/un/refugees-1951.md",
+      "identifier": "int-refugees-1951",
+      "label": "Refugee Convention (1951)",
+      "reference": "UN, 1951",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/ihl/geneva-2.md",
+      "identifier": "int-geneva-2",
+      "label": "Second Geneva Convention (at sea)",
+      "reference": "IHL, 1949",
+      "lastUpdated": "2026-10-04",
+      "group": "ihl"
+    },
+    {
+      "path": "treaties/un/icj-statute.md",
+      "identifier": "int-icj-statute",
+      "label": "Statute of the International Court of Justice",
+      "reference": "UN, 1945",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/ihl/geneva-3.md",
+      "identifier": "int-geneva-3",
+      "label": "Third Geneva Convention (prisoners of war)",
+      "reference": "IHL, 1949",
+      "lastUpdated": "2026-10-04",
+      "group": "ihl"
+    },
+    {
+      "path": "treaties/eu/teu.md",
+      "identifier": "int-teu",
+      "label": "Treaty on European Union (TEU)",
+      "reference": "EU, 1992",
+      "lastUpdated": "2026-10-04",
+      "group": "eu"
+    },
+    {
+      "path": "treaties/eu/tfeu.md",
+      "identifier": "int-tfeu",
+      "label": "Treaty on the Functioning of the European Union (TFEU)",
+      "reference": "EU, 1957",
+      "lastUpdated": "2026-10-04",
+      "group": "eu"
+    },
+    {
+      "path": "treaties/un/udhr.md",
+      "identifier": "int-udhr",
+      "label": "Universal Declaration of Human Rights",
+      "reference": "UN, 1948",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/vccr.md",
+      "identifier": "int-vccr",
+      "label": "Vienna Convention on Consular Relations",
+      "reference": "UN, 1963",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/vcdr.md",
+      "identifier": "int-vcdr",
+      "label": "Vienna Convention on Diplomatic Relations",
+      "reference": "UN, 1961",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    },
+    {
+      "path": "treaties/un/vclt.md",
+      "identifier": "int-vclt",
+      "label": "Vienna Convention on the Law of Treaties",
+      "reference": "UN, 1969",
+      "lastUpdated": "2026-10-04",
+      "group": "un"
+    }
+  ]
+}
