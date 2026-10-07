@@ -27,7 +27,7 @@ import { readLegalizeLaw } from './locus/legalizeReader';
 import { listLegiCodes, readLegiCode } from './locus/legiReader';
 import { placeLabel } from './locus/articleText';
 import {
-  EMPTY_LIBRARY, SPINE, importPlace, joinPath, parseLibrary, withPack, withPlace, withRequest,
+  EMPTY_LIBRARY, SPINE, importPlace, parseLibrary, withPack, withPlace, withRequest,
   type HostPort, type ImportedPlace, type LibraryState,
 } from './locus/library';
 import { useClock } from './locus/useClock';
@@ -36,6 +36,7 @@ import { Home } from './ui/Home';
 import { CountryView } from './ui/CountryView';
 import { RequestCountry, type RequestOutcome } from './ui/RequestCountry';
 import { Footer } from './ui/Footer';
+import { packOf, countryPack } from './locus/packName';
 import type { Country, Job, VaultState, View } from './ui/types';
 
 // Must match "name" in mnemo-plugin.json: the host keys the sandbox vault on it.
@@ -65,6 +66,32 @@ export default function App() {
   // write back a copy taken before an await (two saves racing).
   const libRef = useRef(lib);
   libRef.current = lib;
+  // Pack → vault name and folder, for this window's life (the host answers the same).
+  const packVaults = useRef(new Map<string, { vault: string; folder: string | null }>());
+
+  /**
+   * The vault of one Memory Pack (host doc 135 §6.6): one per country, one per
+   * US place, under the knowledge folder the person chose in the Hub. Words
+   * only: laws are found by their words, and vectors would cost an embedding
+   * per article for nothing (doc 134).
+   */
+  const packVault = useCallback(async (pack: string): Promise<{ vault: string; folder: string | null }> => {
+    const known = packVaults.current.get(pack);
+    if (known) return known;
+    const res = await sdk.invoke<{ vault?: string; folder?: string }>('vault.pack.ensure', { pack, lexicalOnly: true });
+    if (!res?.vault) throw new Error('ENSURE_PACK_FAILED');
+    // `folder` = `<knowledge root>/<app>/`, next to the packs: the laws' files
+    // go there and the person is never asked for a folder (Tony, 07/10).
+    const found = { vault: res.vault, folder: typeof res.folder === 'string' && res.folder ? res.folder : null };
+    packVaults.current.set(pack, found);
+    return found;
+  }, []);
+
+  /** A failure, worded when it is one the person can act on. */
+  const failureText = useCallback((err: unknown): string => {
+    const why = errText(err);
+    return why.includes('NO_KNOWLEDGE_ROOT') ? t('import.noKnowledgeRoot') : t('import.failed', { why });
+  }, [t]);
 
   // ── Boot: durable library + the sandbox vault ─────────────────────────
   const bootVault = useCallback(() => {
@@ -145,32 +172,10 @@ export default function App() {
     }
   };
 
-  // ── The folder the laws are written to ────────────────────────────────
-  const pickFolder = async (): Promise<string | null> => {
-    const picked = await sdk.selectFolder({ startIn: 'Documents' });
-    if (!picked) {
-      setNotice([t('import.noFolder')]);
-      return null;
-    }
-    // A named sub-folder, so the person sees where the laws went. ⚠️ If the
-    // picked folder is watched by a vault, these files enter THAT vault too
-    // (doc 134 §10.3): the cartridge cannot see watched folders.
-    const dir = joinPath(picked, 'MnemoLaw');
-    const made = await sdk.invoke<{ success?: boolean; error?: string }>('dialog.mkdir', { dirPath: dir });
-    if (made && made.success === false) {
-      setNotice([t('import.failed', { why: made.error ?? 'MKDIR_FAILED' })]);
-      return null;
-    }
-    await saveLib({ ...libRef.current, folder: dir });
-    return dir;
-  };
-
   // ── One unit (city, county or code), into the folder and the vault ────
   const runImport = async (initial: LocusPlace) => {
     if (vault.kind !== 'ready') return;
     setNotice([]);
-    const folder = libRef.current.folder ?? await pickFolder();
-    if (!folder) return;
     const ctrl = new AbortController();
     abortRef.current = ctrl;
     let place = initial;
@@ -178,6 +183,11 @@ export default function App() {
     const startedAt = Date.now();
     setJob({ kind: 'download', startedAt, bytes: 0, place });
     try {
+      // The pack first: a missing knowledge folder must be said before a
+      // download, not after it.
+      const { vault: target, folder } = await packVault(packOf(initial));
+      // An older host answers no folder: said, never a guessed path.
+      if (!folder) throw new Error('NO_PACK_FOLDER');
       const onProgress = (p: { bytes: number }) => setJob({ kind: 'download', startedAt, bytes: p.bytes, place });
       let articles: LocusArticle[];
       let skippedBefore = 0;
@@ -231,7 +241,7 @@ export default function App() {
         },
       };
       const entry: ImportedPlace = await importPlace(port, {
-        folder, vault: vault.vault, place, rows: articles, skippedBefore, signal: ctrl.signal,
+        folder, vault: target, place, rows: articles, skippedBefore, signal: ctrl.signal,
         onIngest: (done, total) => setJob({ kind: 'ingest', startedAt: ingestStarted, place, done, total }),
       });
       await saveLib(withPlace({ ...libRef.current, folder }, entry));
@@ -242,7 +252,7 @@ export default function App() {
       if (ctrl.signal.aborted) lines.push(t('import.stopped'));
       setNotice(lines);
     } catch (err) {
-      setNotice([ctrl.signal.aborted ? t('import.stopped') : t('import.failed', { why: errText(err) })]);
+      setNotice([ctrl.signal.aborted ? t('import.stopped') : failureText(err)]);
     } finally {
       setJob(null);
     }
@@ -258,6 +268,7 @@ export default function App() {
     abortRef.current = ctrl;
     const startedAt = Date.now();
     try {
+      const { vault: target } = await packVault(countryPack(country));
       const paths = await loadPackPaths(country, rank);
       const prior = libRef.current.packs.find((p) => p.country === country && p.rank === rank);
       const start = prior ?? newPack(country, rank, paths.length, new Date());
@@ -265,7 +276,7 @@ export default function App() {
       const end = await runPack({
         fetchText: withRetry(fetchText),
         port: { ingest: async (entry) => { await sdk.invoke('mnemosyne.ingest', { ...entry, spineType: SPINE }, INGEST_TIMEOUT_MS); } },
-        vault: vault.vault,
+        vault: target,
         signal: ctrl.signal,
         save: (entry) => saveLib(withPack(libRef.current, entry)),
         onLaw: (entry) => setJob({ kind: 'pack', startedAt, rank, cursor: entry.cursor, startCursor: start.cursor, total: entry.total, articles: entry.inVault }),
@@ -274,7 +285,7 @@ export default function App() {
         ? t('pack.stopped', { cursor: end.cursor.toLocaleString(), total: end.total.toLocaleString() })
         : t('pack.finished', { laws: end.laws.toLocaleString(), articles: end.inVault.toLocaleString(), refused: end.refused.toLocaleString() })]);
     } catch (err) {
-      setNotice([t('import.failed', { why: errText(err) })]);
+      setNotice([failureText(err)]);
     } finally {
       setJob(null);
     }
@@ -359,7 +370,6 @@ export default function App() {
           sdk.openInOS(lib.folder).then((r) => { if (!r?.success) console.error('[mnemo-law] open folder refused', r?.error); })
             .catch((err) => console.error('[mnemo-law] open folder failed', err));
         }}
-        onChangeFolder={() => { pickFolder().catch((err) => setNotice([t('import.failed', { why: errText(err) })])); }}
       />
     </div>
   );

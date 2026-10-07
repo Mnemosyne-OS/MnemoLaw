@@ -1,15 +1,15 @@
 {
   "name": "@mnemosyne-plugins/mnemo-law",
   "displayName": "MnemoLaw",
-  "version": "0.9.0",
-  "category": "Research",
+  "version": "0.10.0",
+  "category": "Memory",
   "vendor": "Mnemosyne Labs",
   "license": "MIT",
-  "description": "Laws in your memory. Pick a US city or county (LOCUS v1, UC Berkeley, CC BY-NC-4.0, non-commercial use), a French national code (LEGI, Légifrance data, Licence Ouverte 2.0), an Act of the UK Parliament, a Canadian federal Act (English or French), an EU regulation, an international treaty (UN, human rights, Geneva Conventions, EU treaties), or a national law of Colombia, Spain, Argentina, Italy or Portugal (official sources, through Legalize, Normattiva and Justice Canada): MnemoLaw downloads the texts and keeps them in a folder you choose and in its own vault. It quotes texts and gives no legal advice.",
+  "description": "Laws in your memory. Pick a US city or county (LOCUS v1, UC Berkeley, CC BY-NC-4.0, non-commercial use), a French national code (LEGI, Légifrance data, Licence Ouverte 2.0), an Act of the UK Parliament, a Canadian federal Act (English or French), an EU regulation, an international treaty (UN, human rights, Geneva Conventions, EU treaties), or a national law of Colombia, Spain, Argentina, Italy or Portugal (official sources, through Legalize, Normattiva and Justice Canada): MnemoLaw downloads the texts and keeps them in your knowledge folder and in one memory pack per country. It quotes texts and gives no legal advice.",
   "descriptionI18n": {
-    "en": "Laws in your memory. Pick a US city or county (LOCUS v1, UC Berkeley, CC BY-NC-4.0, non-commercial use), a French national code (LEGI, Légifrance data, Licence Ouverte 2.0), an Act of the UK Parliament, a Canadian federal Act (English or French), an EU regulation, an international treaty (UN, human rights, Geneva Conventions, EU treaties), or a national law of Colombia, Spain, Argentina, Italy or Portugal (official sources, through Legalize, Normattiva and Justice Canada): MnemoLaw downloads the texts and keeps them in a folder you choose and in its own vault. It quotes texts and gives no legal advice.",
-    "fr": "Les lois dans ta mémoire. Choisis une ville ou un comté des États-Unis (LOCUS v1, UC Berkeley, CC BY-NC-4.0, usage non commercial) ou un code national français (LEGI, données de Légifrance, Licence Ouverte 2.0) : MnemoLaw télécharge les textes et les range dans un dossier que tu choisis et dans son propre coffre. Il cite des textes et ne donne pas de conseil juridique.",
-    "es": "Las leyes en tu memoria. Elige una ciudad o un condado de Estados Unidos (LOCUS v1, UC Berkeley, CC BY-NC-4.0, uso no comercial) o un código nacional francés (LEGI, datos de Légifrance, Licence Ouverte 2.0): MnemoLaw descarga los textos y los guarda en una carpeta que eliges y en su propia bóveda. Cita textos y no da asesoramiento jurídico."
+    "en": "Laws in your memory. Pick a US city or county (LOCUS v1, UC Berkeley, CC BY-NC-4.0, non-commercial use), a French national code (LEGI, Légifrance data, Licence Ouverte 2.0), an Act of the UK Parliament, a Canadian federal Act (English or French), an EU regulation, an international treaty (UN, human rights, Geneva Conventions, EU treaties), or a national law of Colombia, Spain, Argentina, Italy or Portugal (official sources, through Legalize, Normattiva and Justice Canada): MnemoLaw downloads the texts and keeps them in your knowledge folder and in one memory pack per country. It quotes texts and gives no legal advice.",
+    "fr": "Les lois dans ta mémoire. Choisis une ville ou un comté des États-Unis (LOCUS v1, UC Berkeley, CC BY-NC-4.0, usage non commercial) ou un code national français (LEGI, données de Légifrance, Licence Ouverte 2.0) : MnemoLaw télécharge les textes et les range dans ton dossier des connaissances et dans un pack de mémoire par pays. Il cite des textes et ne donne pas de conseil juridique.",
+    "es": "Las leyes en tu memoria. Elige una ciudad o un condado de Estados Unidos (LOCUS v1, UC Berkeley, CC BY-NC-4.0, uso no comercial) o un código nacional francés (LEGI, datos de Légifrance, Licence Ouverte 2.0): MnemoLaw descarga los textos y los guarda en tu carpeta de conocimientos y en un paquete de memoria por país. Cita textos y no da asesoramiento jurídico."
   },
   "keywords": [
     "city code",

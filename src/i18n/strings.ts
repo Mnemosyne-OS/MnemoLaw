@@ -33,8 +33,7 @@ const en = {
 
   'import.button': 'Import',
   'import.reimport': 'Import again',
-  'import.folder': 'Choose the folder where MnemoLaw keeps the laws',
-  'import.noFolder': 'Import needs a folder. Choose one to continue.',
+  'import.noKnowledgeRoot': 'Choose where knowledge goes in the Hub that just opened, then import again.',
   'import.download': 'Downloading {place}… {mb} MB, {s} s',
   'import.vault': 'Writing to memory… {done} / {total} · {elapsed}',
   'import.eta': 'about {left} left',
@@ -54,15 +53,13 @@ const en = {
   'lib.fileMissing': 'The file of {place} could not be read: {why}',
 
   'search.placeholder': 'Search by words: decibel, fence, § 9-2…',
-  'search.hint': 'This search finds words. To ask a question in your own words, use the chat with MnemoLaw in its scope.',
+  'search.hint': 'This search finds words. To ask a question in your own words, open the chat and tick the country under Knowledge in its scope.',
   'search.none': 'No article of the {place} corpus contains these words.',
   'search.results': '{n} articles',
   'search.loading': 'Opening {place}…',
 
   'article.source': 'Source: {attr}. Corpus published {date}. Check the text in force with the city or county.',
 
-  'vault.locked': 'Memory: the vault {vault} is in test mode. The chat reads it when you choose MnemoLaw in its scope. Unlock it in the Vault manager to let the All and AUTO scopes read it too.',
-  'vault.unlocked': 'Memory: the vault {vault} is unlocked. The chat can read it.',
   'vault.failed': 'Memory unavailable: {why}',
   'vault.retry': 'Retry',
   'source.label': 'Source of the laws',
@@ -114,7 +111,7 @@ const en = {
   'nav.back': '← Countries',
   'country.yours': 'Your imports',
   'country.import': 'Import',
-  'chat.hint': 'To ask a question in your own words: open the chat and choose MnemoLaw in its scope.',
+  'chat.hint': 'To ask a question in your own words: open the chat and tick the country under Knowledge in its scope.',
   'request.title': 'Ask for my country',
   'request.lead': 'Pick your country. The request goes to the Mnemosyne OS team.',
   'request.search': 'Find a country',
@@ -131,8 +128,7 @@ const en = {
   'request.already': 'Already asked on {date}',
   'request.yours': 'Your requests',
   'footer.folder': 'Laws are kept in {folder}',
-  'footer.noFolder': 'You choose a folder at the first import.',
-  'footer.change': 'Change folder',
+  'footer.noFolder': 'Laws are kept in your knowledge folder from the first import.',
 };
 
 export type Key = keyof typeof en;
@@ -158,8 +154,7 @@ const fr: Dict = {
 
   'import.button': 'Importer',
   'import.reimport': 'Réimporter',
-  'import.folder': 'Choisis le dossier où MnemoLaw range les lois',
-  'import.noFolder': "L'import a besoin d'un dossier. Choisis-en un pour continuer.",
+  'import.noKnowledgeRoot': "Choisis où ranger les connaissances dans le Hub qui vient de s'ouvrir, puis relance l'import.",
   'import.download': 'Téléchargement de {place}… {mb} Mo, {s} s',
   'import.vault': 'Écriture en mémoire… {done} / {total} · {elapsed}',
   'import.eta': 'reste environ {left}',
@@ -179,15 +174,13 @@ const fr: Dict = {
   'lib.fileMissing': "Le fichier de {place} n'a pas pu être lu : {why}",
 
   'search.placeholder': 'Chercher par mots : decibel, fence, § 9-2…',
-  'search.hint': 'Cette recherche trouve des mots. Pour poser une question avec tes mots, utilise le chat avec MnemoLaw dans sa portée.',
+  'search.hint': 'Cette recherche trouve des mots. Pour poser une question avec tes mots, ouvre le chat et coche le pays sous Connaissances dans sa portée.',
   'search.none': 'Aucun article du corpus de {place} ne contient ces mots.',
   'search.results': '{n} articles',
   'search.loading': 'Ouverture de {place}…',
 
   'article.source': 'Source : {attr}. Corpus publié en {date}. Vérifie le texte en vigueur auprès de la ville ou du comté.',
 
-  'vault.locked': 'Mémoire : le coffre {vault} est en mode test. Le chat le lit quand tu choisis MnemoLaw dans sa portée. Déverrouille-le dans le gestionnaire de coffres pour que les portées Tous et AUTO le lisent aussi.',
-  'vault.unlocked': 'Mémoire : le coffre {vault} est déverrouillé. Le chat peut le lire.',
   'vault.failed': 'Mémoire indisponible : {why}',
   'vault.retry': 'Réessayer',
   'source.label': 'Source des lois',
@@ -239,7 +232,7 @@ const fr: Dict = {
   'nav.back': '← Pays',
   'country.yours': 'Tes imports',
   'country.import': 'Importer',
-  'chat.hint': 'Pour poser une question avec tes mots : ouvre le chat et choisis MnemoLaw dans sa portée.',
+  'chat.hint': 'Pour poser une question avec tes mots : ouvre le chat et coche le pays sous Connaissances dans sa portée.',
   'request.title': 'Demander mon pays',
   'request.lead': 'Choisis ton pays. La demande part vers l’équipe de Mnemosyne OS.',
   'request.search': 'Chercher un pays',
@@ -256,8 +249,7 @@ const fr: Dict = {
   'request.already': 'Déjà demandé le {date}',
   'request.yours': 'Tes demandes',
   'footer.folder': 'Les lois sont rangées dans {folder}',
-  'footer.noFolder': 'Tu choisis un dossier au premier import.',
-  'footer.change': 'Changer de dossier',
+  'footer.noFolder': 'Les lois sont rangées dans ton dossier des connaissances dès le premier import.',
 };
 
 const es: Dict = {
@@ -280,8 +272,7 @@ const es: Dict = {
 
   'import.button': 'Importar',
   'import.reimport': 'Importar de nuevo',
-  'import.folder': 'Elige la carpeta donde MnemoLaw guarda las leyes',
-  'import.noFolder': 'La importación necesita una carpeta. Elige una para continuar.',
+  'import.noKnowledgeRoot': 'Elige dónde guardar los conocimientos en el Hub que se acaba de abrir y vuelve a importar.',
   'import.download': 'Descargando {place}… {mb} MB, {s} s',
   'import.vault': 'Escribiendo en la memoria… {done} / {total} · {elapsed}',
   'import.eta': 'quedan unos {left}',
@@ -301,15 +292,13 @@ const es: Dict = {
   'lib.fileMissing': 'No se pudo leer el archivo de {place}: {why}',
 
   'search.placeholder': 'Buscar por palabras: decibel, fence, § 9-2…',
-  'search.hint': 'Esta búsqueda encuentra palabras. Para hacer una pregunta con tus palabras, usa el chat con MnemoLaw en su alcance.',
+  'search.hint': 'Esta búsqueda encuentra palabras. Para hacer una pregunta con tus palabras, abre el chat y marca el país en Conocimientos de su alcance.',
   'search.none': 'Ningún artículo del corpus de {place} contiene estas palabras.',
   'search.results': '{n} artículos',
   'search.loading': 'Abriendo {place}…',
 
   'article.source': 'Fuente: {attr}. Corpus publicado en {date}. Comprueba el texto vigente con la ciudad o el condado.',
 
-  'vault.locked': 'Memoria: la bóveda {vault} está en modo prueba. El chat la lee cuando eliges MnemoLaw en su alcance. Desbloquéala en el gestor de bóvedas para que los alcances Todos y AUTO también la lean.',
-  'vault.unlocked': 'Memoria: la bóveda {vault} está desbloqueada. El chat puede leerla.',
   'vault.failed': 'Memoria no disponible: {why}',
   'vault.retry': 'Reintentar',
   'source.label': 'Fuente de las leyes',
@@ -361,7 +350,7 @@ const es: Dict = {
   'nav.back': '← Países',
   'country.yours': 'Tus importaciones',
   'country.import': 'Importar',
-  'chat.hint': 'Para hacer una pregunta con tus palabras: abre el chat y elige MnemoLaw en su alcance.',
+  'chat.hint': 'Para hacer una pregunta con tus palabras: abre el chat y marca el país en Conocimientos de su alcance.',
   'request.title': 'Pedir mi país',
   'request.lead': 'Elige tu país. La solicitud va al equipo de Mnemosyne OS.',
   'request.search': 'Buscar un país',
@@ -378,8 +367,7 @@ const es: Dict = {
   'request.already': 'Ya solicitado el {date}',
   'request.yours': 'Tus solicitudes',
   'footer.folder': 'Las leyes se guardan en {folder}',
-  'footer.noFolder': 'Eliges una carpeta en la primera importación.',
-  'footer.change': 'Cambiar de carpeta',
+  'footer.noFolder': 'Las leyes se guardan en tu carpeta de conocimientos desde la primera importación.',
 };
 
 /** de / pt / ru / zh are not written yet: those locales read English. */

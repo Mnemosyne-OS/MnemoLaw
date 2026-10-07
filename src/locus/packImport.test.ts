@@ -85,7 +85,7 @@ describe('runPack', () => {
 
 describe('withRetry', () => {
   it('waits and tries again on a rate limit, then succeeds', async () => {
-    const wait = vi.fn(async () => {});
+    const wait = vi.fn(async (_ms: number) => {});
     const f = vi.fn().mockRejectedValueOnce(new Error('HTTP_429')).mockRejectedValueOnce(new Error('HTTP_503')).mockResolvedValue('ok');
     await expect(withRetry(f, wait)('u')).resolves.toBe('ok');
     expect(wait.mock.calls.map((c) => c[0])).toEqual([2000, 4000]);
