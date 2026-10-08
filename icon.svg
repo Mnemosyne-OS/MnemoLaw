@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MnemoLaw">
+  <defs>
+    <linearGradient id="law-grad" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 9V38" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 14H38" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 39H32" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="9" r="2" fill="url(#law-grad)"/>
+  <path d="M10 14L5 26" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 14L15 26" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4 26C4 29.5 6.7 31 10 31C13.3 31 16 29.5 16 26Z" fill="url(#law-grad)" fill-opacity="0.16" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 14L33 26" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 14L43 26" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 26C32 29.5 34.7 31 38 31C41.3 31 44 29.5 44 26Z" fill="url(#law-grad)" fill-opacity="0.16" stroke="url(#law-grad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
