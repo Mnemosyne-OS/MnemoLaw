@@ -1,7 +1,7 @@
 {
   "name": "@mnemosyne-plugins/mnemo-law",
   "displayName": "MnemoLaw",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "category": "Memory",
   "vendor": "Mnemosyne Labs",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "france",
     "law",
     "legal",
-    "legifrance",
+    "legifrance", "lois",
     "locus",
     "ordinance",
     "united states"

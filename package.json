@@ -1,6 +1,6 @@
 {
   "name": "@mnemosyne-plugins/mnemo-law",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "private": true,
   "type": "module",
   "description": "Local laws in memory: pick a US city or county, MnemoLaw reads its ordinances from LOCUS v1 (UC Berkeley, CC BY-NC-4.0) on Hugging Face by byte range and writes them into its own vault. The cartridge ships no law data.",
