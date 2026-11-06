@@ -10,7 +10,7 @@
  * so far (bytes, seconds, chronicles), never an invented percentage.
  */
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { MnemoCartridgeSDK } from './sdk/mnemo-sdk';
+import { sdk } from './host';
 import { useI18n } from './i18n/useI18n';
 import { translate } from './i18n/strings';
 import { JUSTICE_CANADA_SOURCE, LEGALIZE_SOURCES, LEGI_LICENSE_URL, LOCUS_LICENSE_URL, NORMATTIVA_SOURCE } from './locus/locusSource';
@@ -36,11 +36,10 @@ import { Home } from './ui/Home';
 import { CountryView } from './ui/CountryView';
 import { RequestCountry, type RequestOutcome } from './ui/RequestCountry';
 import { Footer } from './ui/Footer';
+import { LawAgentActions } from './ui/LawAgentActions';
 import { packOf, countryPack } from './locus/packName';
 import type { Country, Job, VaultState, View } from './ui/types';
 
-// Must match "name" in mnemo-plugin.json: the host keys the sandbox vault on it.
-const sdk = new MnemoCartridgeSDK('@mnemosyne-plugins/mnemo-law');
 
 /** A chronicle write is a local IPC; 15 s is the house default (rule 9). */
 const INGEST_TIMEOUT_MS = 15_000;
@@ -358,6 +357,22 @@ export default function App() {
           <RequestCountry t={t} lang={lang} lib={lib} onSend={requestCountry} />
         </>
       )}
+
+      {/* What an agent may do here (doc 149): the same tiles, list and Add buttons the person uses. */}
+      <LawAgentActions
+        view={view}
+        vault={vault}
+        lib={lib}
+        libLoaded={libLoaded}
+        placesBy={placesBy}
+        placesError={placesError}
+        job={job}
+        notice={notice}
+        go={go}
+        loadPlaces={loadPlaces}
+        runImport={runImport}
+        stop={() => abortRef.current?.abort()}
+      />
 
       <Footer
         t={t}
