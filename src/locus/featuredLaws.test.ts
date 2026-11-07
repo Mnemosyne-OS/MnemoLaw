@@ -39,6 +39,76 @@ describe('the European Union list', () => {
   });
 });
 
+describe('Malta (doc 134 §16.16)', () => {
+  const read = async (path: string) => {
+    const { readFileSync } = await import('node:fs');
+    const { join } = await import('node:path');
+    return readFileSync(join(__dirname, '..', '..', 'public', 'data', path), 'utf8');
+  };
+
+  it('ships its laws with the cartridge: every listed file is in force, current and read article by article', async () => {
+    const { parseLegalizeFile, splitArticles, legalizeFileUrl } = await import('./legalizeReader');
+    const index = JSON.parse(await read('countries/mt/index.json')) as { entries: { path: string; identifier: string; label: string }[] };
+    expect(index.entries.length).toBeGreaterThanOrEqual(30);
+    // The gaming laws come first: the Act, then its twelve regulations.
+    expect(index.entries.slice(0, 13).map((e) => e.identifier)).toEqual([
+      'mt-cap-583', ...Array.from({ length: 12 }, (_, i) => `mt-sl-583.${String(i + 1).padStart(2, '0')}`),
+    ]);
+    for (const e of index.entries) {
+      const { meta, body } = parseLegalizeFile(await read(e.path));
+      expect(meta).toMatchObject({ identifier: e.identifier, status: 'in_force', textState: 'current' });
+      expect(meta.source).toMatch(/^https:\/\/legislation\.mt\/eli\//);
+      expect(splitArticles(body, { country: 'mt' }).filter((a) => a.header.startsWith('Art.')).length, e.identifier).toBeGreaterThan(1);
+    }
+    expect(legalizeFileUrl('mt', 'countries/mt/cap-583.md')).toBe('data/countries/mt/cap-583.md');
+  });
+
+  it('reads the Gaming Act as its 59 articles and 56A, each titled by its marginal note, schedules kept', async () => {
+    const { parseLegalizeFile, splitArticles } = await import('./legalizeReader');
+    const units = splitArticles(parseLegalizeFile(await read('countries/mt/cap-583.md')).body, { country: 'mt' });
+    const arts = units.filter((a) => a.header.startsWith('Art.'));
+    expect(arts).toHaveLength(60);
+    expect(arts.map((a) => a.header)).toContain('Art. 56-A');
+    const minors = arts.find((a) => a.header === 'Art. 14')!;
+    expect(minors.content).toMatch(/^\(Protection of minors\)/);
+    expect(minors.content).toContain('a citizen of Malta under the age of twenty-five years');
+    expect(minors.topic).toBe('PART V - Protection of Minors and Vulnerable Persons');
+    // The amendment history in the margin is not law text.
+    expect(arts.some((a) => /Amended by:/.test(a.content))).toBe(false);
+    expect(units.map((u) => u.header)).toContain('THIRD SCHEDULE');
+  });
+
+  it('keeps no provision whose whole text is its repeal notice, and gives the 2026 gaming tax', async () => {
+    const { parseLegalizeFile, splitArticles } = await import('./legalizeReader');
+    const tax = splitArticles(parseLegalizeFile(await read('countries/mt/sl-583.10.md')).body, { country: 'mt' });
+    expect(tax.some((a) => /^(\([^)]*\)\s*)?Repealed by/.test(a.content))).toBe(false);
+    const art3 = tax.find((a) => a.header === 'Art. 3')!;
+    expect(art3.content).toContain('fifteen per cent (15%)');
+    expect(art3.content).toMatch(/; and\n\n\(b\) ten per cent/);
+  });
+
+  it('opens the list from the cartridge\'s own address and names legislation.mt, never Legalize', async () => {
+    const { vi } = await import('vitest');
+    const { sourceLine } = await import('./articleText');
+    const index = await read('countries/mt/index.json');
+    const fetchMock = vi.fn(async () => new Response(index, { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    try {
+      const laws = await loadLegalizeLaws('mt');
+      expect(fetchMock).toHaveBeenCalledWith('data/countries/mt/index.json');
+      const tiles = featuredPlaces(laws, 'mt', 'fr');
+      expect(tiles[0]).toMatchObject({ label: 'Gaming Act', reference: 'Cap. 583', folder: 'countries/mt/cap-583.md' });
+      expect(tiles.length).toBeGreaterThanOrEqual(10);
+      expect(filterPlaces(laws, 'player protection', 10).map((p) => p.label)).toContain('Gaming Player Protection Regulations');
+      const line = sourceLine(tiles[0]!, { header: 'Art. 1', content: '', isSubstantive: true, topic: null, function: null });
+      expect(line).toContain('legislation.mt');
+      expect(line).not.toContain('Legalize');
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+});
+
 describe('the international treaties', () => {
   it('ship with the cartridge: every listed file exists and is read article by article', async () => {
     const { readFileSync } = await import('node:fs');

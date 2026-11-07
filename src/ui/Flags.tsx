@@ -111,6 +111,20 @@ export function FlagEU({ width = 48 }: { width?: number }) {
   );
 }
 
+/** Malta: white and red halves, the George Cross drawn as a grey cross in the top corner. */
+export function FlagMT({ width = 48 }: { width?: number }) {
+  return (
+    <svg width={width} height={(width * 2) / 3} viewBox="0 0 3 2" role="img" aria-hidden="true" style={{ borderRadius: 3, display: 'block' }}>
+      <rect width="3" height="2" fill="#CF142B" />
+      <rect width="1.5" height="2" fill="#FFFFFF" />
+      <g fill="#9EA3A8" stroke="#CF142B" strokeWidth="0.015">
+        <rect x="0.2" y="0.3" width="0.38" height="0.1" />
+        <rect x="0.34" y="0.16" width="0.1" height="0.38" />
+      </g>
+    </svg>
+  );
+}
+
 /** International treaties: a globe in white lines on UN blue (no state's flag). */
 export function FlagINT({ width = 48 }: { width?: number }) {
   return (
@@ -126,9 +140,10 @@ export function FlagINT({ width = 48 }: { width?: number }) {
 }
 
 /** The flag of a country MnemoLaw has a source for. */
-export function FlagOf({ country, width = 48 }: { country: 'us' | 'fr' | 'co' | 'es' | 'ar' | 'it' | 'pt' | 'uk' | 'ca' | 'eu' | 'int'; width?: number }) {
+export function FlagOf({ country, width = 48 }: { country: 'us' | 'fr' | 'co' | 'es' | 'ar' | 'it' | 'pt' | 'uk' | 'ca' | 'eu' | 'mt' | 'int'; width?: number }) {
   if (country === 'int') return <FlagINT width={width} />;
   if (country === 'eu') return <FlagEU width={width} />;
+  if (country === 'mt') return <FlagMT width={width} />;
   if (country === 'ca') return <FlagCA width={width} />;
   if (country === 'pt') return <FlagPT width={width} />;
   if (country === 'uk') return <FlagGB width={width} />;

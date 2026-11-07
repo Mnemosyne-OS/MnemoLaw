@@ -93,6 +93,12 @@ export const LEGALIZE_SOURCES: Record<string, LegalizeSource> = {
     licence: 'official acts; each copy names its official page and where it was taken from',
     licenceUrl: 'https://github.com/Mnemosyne-OS',
   },
+  mt: {
+    official: 'Laws of Malta (legislation.mt), consolidated texts',
+    checkAt: 'legislation.mt',
+    licence: 'official acts; each copy names its page on legislation.mt',
+    licenceUrl: 'https://legislation.mt/',
+  },
   eu: {
     official: 'EUR-Lex (Publications Office of the European Union)',
     checkAt: 'eur-lex.europa.eu',
@@ -136,9 +142,14 @@ export function normattivaAttribution(): string {
   return `${NORMATTIVA_SOURCE.official}, open data, ${NORMATTIVA_SOURCE.licence}`;
 }
 
+/** Sources MnemoLaw copied itself (doc 134 §16.15-16): no Legalize repository behind them. */
+export const COPIED_BY_MNEMOLAW = new Set(['int', 'mt']);
+
 /** Attribution of a Legalize country, one line. */
 export function legalizeAttribution(country: string): string {
   const s = LEGALIZE_SOURCES[country];
+  // Copied by MnemoLaw itself, never through Legalize (treaties, Malta).
+  if (s && COPIED_BY_MNEMOLAW.has(country)) return `${s.official}, ${s.licence}`;
   const official = s ? s.official : country.toUpperCase();
   return `${official}, consolidated by Legalize (legalize-dev/legalize-${country})${s ? `, ${s.licence}` : ''}`;
 }

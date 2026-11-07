@@ -1,0 +1,286 @@
+{
+  "country": "mt",
+  "builtOn": "2026-11-07",
+  "entries": [
+    {
+      "path": "countries/mt/cap-583.md",
+      "identifier": "mt-cap-583",
+      "label": "Gaming Act",
+      "reference": "Cap. 583",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.01.md",
+      "identifier": "mt-sl-583.01",
+      "label": "Responsible Gaming Fund Regulations",
+      "reference": "S.L. 583.01",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.02.md",
+      "identifier": "mt-sl-583.02",
+      "label": "GamingMalta Fund Regulations",
+      "reference": "S.L. 583.02",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.03.md",
+      "identifier": "mt-sl-583.03",
+      "label": "Gaming Licence Fees Regulations",
+      "reference": "S.L. 583.03",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.04.md",
+      "identifier": "mt-sl-583.04",
+      "label": "Gaming Definitions Regulations",
+      "reference": "S.L. 583.04",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.05.md",
+      "identifier": "mt-sl-583.05",
+      "label": "Gaming Authorisations Regulations",
+      "reference": "S.L. 583.05",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.06.md",
+      "identifier": "mt-sl-583.06",
+      "label": "Gaming Compliance and Enforcement Regulations",
+      "reference": "S.L. 583.06",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.07.md",
+      "identifier": "mt-sl-583.07",
+      "label": "Gaming Premises Regulations",
+      "reference": "S.L. 583.07",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.08.md",
+      "identifier": "mt-sl-583.08",
+      "label": "Gaming Player Protection Regulations",
+      "reference": "S.L. 583.08",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.09.md",
+      "identifier": "mt-sl-583.09",
+      "label": "Gaming Commercial Communications Regulations",
+      "reference": "S.L. 583.09",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.10.md",
+      "identifier": "mt-sl-583.10",
+      "label": "Gaming Tax Regulations",
+      "reference": "S.L. 583.10",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.11.md",
+      "identifier": "mt-sl-583.11",
+      "label": "Social Causes Fund Regulations",
+      "reference": "S.L. 583.11",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/sl-583.12.md",
+      "identifier": "mt-sl-583.12",
+      "label": "Retention of Data (Malta Gaming Authority) Regulations",
+      "reference": "S.L. 583.12",
+      "lastUpdated": "2026-11-07",
+      "group": "gaming"
+    },
+    {
+      "path": "countries/mt/cap-373.md",
+      "identifier": "mt-cap-373",
+      "label": "Prevention of Money Laundering Act",
+      "reference": "Cap. 373",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/sl-373.01.md",
+      "identifier": "mt-sl-373.01",
+      "label": "Prevention of Money Laundering and Funding of Terrorism Regulations",
+      "reference": "S.L. 373.01",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/const.md",
+      "identifier": "mt-const",
+      "label": "Constitution of Malta",
+      "reference": "Constitution",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-9.md",
+      "identifier": "mt-cap-9",
+      "label": "Criminal Code",
+      "reference": "Cap. 9",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-16.md",
+      "identifier": "mt-cap-16",
+      "label": "Civil Code",
+      "reference": "Cap. 16",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-12.md",
+      "identifier": "mt-cap-12",
+      "label": "Code of Organization and Civil Procedure",
+      "reference": "Cap. 12",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-13.md",
+      "identifier": "mt-cap-13",
+      "label": "Commercial Code",
+      "reference": "Cap. 13",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-386.md",
+      "identifier": "mt-cap-386",
+      "label": "Companies Act",
+      "reference": "Cap. 386",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-123.md",
+      "identifier": "mt-cap-123",
+      "label": "Income Tax Act",
+      "reference": "Cap. 123",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/cap-406.md",
+      "identifier": "mt-cap-406",
+      "label": "Value Added Tax Act",
+      "reference": "Cap. 406",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/cap-452.md",
+      "identifier": "mt-cap-452",
+      "label": "Employment and Industrial Relations Act",
+      "reference": "Cap. 452",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-378.md",
+      "identifier": "mt-cap-378",
+      "label": "Consumer Affairs Act",
+      "reference": "Cap. 378",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-586.md",
+      "identifier": "mt-cap-586",
+      "label": "Data Protection Act",
+      "reference": "Cap. 586",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-426.md",
+      "identifier": "mt-cap-426",
+      "label": "Electronic Commerce Act",
+      "reference": "Cap. 426",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-399.md",
+      "identifier": "mt-cap-399",
+      "label": "Electronic Communications (Regulation) Act",
+      "reference": "Cap. 399",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-387.md",
+      "identifier": "mt-cap-387",
+      "label": "Arbitration Act",
+      "reference": "Cap. 387",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-370.md",
+      "identifier": "mt-cap-370",
+      "label": "Investment Services Act",
+      "reference": "Cap. 370",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/cap-376.md",
+      "identifier": "mt-cap-376",
+      "label": "Financial Institutions Act",
+      "reference": "Cap. 376",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/cap-591.md",
+      "identifier": "mt-cap-591",
+      "label": "Malta Digital Innovation Authority Act",
+      "reference": "Cap. 591",
+      "lastUpdated": "2026-11-07",
+      "group": "finance"
+    },
+    {
+      "path": "countries/mt/cap-188.md",
+      "identifier": "mt-cap-188",
+      "label": "Maltese Citizenship Act",
+      "reference": "Cap. 188",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-217.md",
+      "identifier": "mt-cap-217",
+      "label": "Immigration Act",
+      "reference": "Cap. 217",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    },
+    {
+      "path": "countries/mt/cap-65.md",
+      "identifier": "mt-cap-65",
+      "label": "Traffic Regulation Ordinance",
+      "reference": "Cap. 65",
+      "lastUpdated": "2026-11-07",
+      "group": "general"
+    }
+  ]
+}

@@ -34,6 +34,7 @@ MnemoLaw quotes texts. It gives no legal advice.
 | Argentina | constitution and 22 codes and main laws | Legalize, from InfoLEG |
 | Italy | constitution and 30 codes | [Normattiva](https://www.normattiva.it), open data |
 | Portugal | constitution and 29 codes and laws | Legalize, from the Diário da República |
+| Malta | the Gaming Act and its 12 regulations, then the Constitution, 4 codes and 17 main Acts, English | copies in `public/data/countries/mt/`, from [legislation.mt](https://legislation.mt) |
 
 Each country also offers packs: every law in force of one kind (every
 Colombian law, every Spanish royal decree…). A pack can weigh hundreds of
@@ -95,6 +96,8 @@ npx tsx scripts/build-catalogue.ts es ../legalize-es
 
 Canada: `scripts/build-canada.ts`, from Justice Canada's index. Treaties:
 `scripts/build-treaties.ts`.
+Malta: `python -I scripts/build-malta.py <pdf-cache-dir>` (PyMuPDF), from the
+PDFs of legislation.mt; the list is `scripts/malta-laws.json`.
 
 ## Sources and attribution
 
@@ -112,6 +115,7 @@ of every source is written into the `ATTRIBUTION.md` of the folder you pick.
 - Justice Canada, Open Government Licence – Canada.
 - Normattiva, Italian State acts published as open data.
 - Treaties: the official page and the copy's origin are named in each file.
+- Laws of Malta: official acts; each copy names its page on legislation.mt.
 
 ## Licence
 

@@ -44,19 +44,35 @@ const LAZY: Record<string, () => Promise<{ default: unknown }>> = {
   eu: () => import('../catalogue/eu.json'),
 };
 
+/**
+ * Lists and texts copied once and shipped with the cartridge in
+ * `public/data/`, read from its own address: the treaties (doc 134 §16.15,
+ * `scripts/build-treaties.ts`) and Malta, whose only source serves PDFs to
+ * its own origin (§16.16, `scripts/build-malta.py`).
+ */
+const SHIPPED: Record<string, string> = {
+  int: 'data/treaties/index.json',
+  mt: 'data/countries/mt/index.json',
+};
+
+/** True when a country's laws ship with the cartridge instead of being read from a repository. */
+export function isShippedCountry(country: string): boolean {
+  return country in SHIPPED;
+}
+
 /** True when a country's list is read on opening it. */
 export function isLazyCatalogue(country: string): boolean {
-  return country in LAZY || country === 'int';
+  return country in LAZY || country in SHIPPED;
 }
 
 /** Reads a lazy list once, then serves it like a shipped one. */
 export async function loadLegalizeLaws(country: string): Promise<LocusPlace[]> {
-  if (country === 'int' && !CATALOGUES.int) {
-    // Built by scripts/build-treaties.ts, shipped in public/data/.
-    const res = await fetch('data/treaties/index.json');
+  const shipped = SHIPPED[country];
+  if (shipped && !CATALOGUES[country]) {
+    const res = await fetch(shipped);
     if (!res.ok) throw new Error(`HTTP_${res.status}`);
     const idx = (await res.json()) as { builtOn: string; entries: CatalogueEntry[] };
-    CATALOGUES.int = { country: 'int', commit: '', commitDate: idx.builtOn, entries: idx.entries };
+    CATALOGUES[country] = { country, commit: '', commitDate: idx.builtOn, entries: idx.entries };
   }
   if (!CATALOGUES[country]) {
     const load = LAZY[country];
@@ -67,7 +83,7 @@ export async function loadLegalizeLaws(country: string): Promise<LocusPlace[]> {
 }
 
 /** The Legalize countries this build ships a list for, read now or on opening. */
-export const LEGALIZE_COUNTRIES = [...Object.keys(CATALOGUES), 'uk', 'eu', 'int'];
+export const LEGALIZE_COUNTRIES = [...Object.keys(CATALOGUES), 'uk', 'eu', ...Object.keys(SHIPPED)];
 
 /** Key prefix of a Legalize unit: `legalize|<cc>|<identifier>`. */
 export const LEGALIZE_KEY = 'legalize|';

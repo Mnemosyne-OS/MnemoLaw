@@ -40,6 +40,13 @@ const FEATURED: Record<string, string[]> = {
     'EU Charter of Fundamental Rights', 'Istanbul Convention (violence against women)', 'Convention against Torture',
     'Convention on discrimination against women (CEDAW)', 'Vienna Convention on Diplomatic Relations',
   ],
+  // Malta: the gaming laws first (asked for on 2026-11-07), then what people ask most.
+  mt: [
+    'Gaming Act', 'Gaming Authorisations Regulations', 'Gaming Player Protection Regulations',
+    'Gaming Tax Regulations', 'Gaming Commercial Communications Regulations', 'Gaming Compliance and Enforcement Regulations',
+    'Prevention of Money Laundering and Funding of Terrorism Regulations', 'Constitution of Malta', 'Civil Code',
+    'Criminal Code', 'Companies Act', 'Employment and Industrial Relations Act',
+  ],
   eu: [
     'GDPR — General Data Protection Regulation', 'AI Act — Artificial Intelligence Act',
     'Digital Services Act (DSA)', 'Air passenger rights (denied boarding, delays, cancellations)',

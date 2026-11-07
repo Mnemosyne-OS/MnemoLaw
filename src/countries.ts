@@ -23,7 +23,7 @@ export function isoCode(country: string): string {
 }
 
 /** Countries MnemoLaw already has a source for: never offered as a request. */
-export const AVAILABLE_COUNTRIES = ['US', 'FR', 'CO', 'ES', 'AR', 'IT', 'PT', 'GB', 'CA'] as const;
+export const AVAILABLE_COUNTRIES = ['US', 'FR', 'CO', 'ES', 'AR', 'IT', 'PT', 'GB', 'CA', 'MT'] as const;
 
 /** The name of a country in the app's language; the code itself when names are unavailable. */
 export function countryLabel(code: string, lang: string): string {

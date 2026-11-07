@@ -17,7 +17,7 @@ import { placeLabel } from '../locus/articleText';
 import { catalogueDate, packSummaries } from '../locus/legalizeCatalogue';
 import { ITALY_LIST_DATE } from '../locus/italyCatalogue';
 import { canadaListDate } from '../locus/canadaCatalogue';
-import { LEGALIZE_SOURCES } from '../locus/locusSource';
+import { COPIED_BY_MNEMOLAW, LEGALIZE_SOURCES } from '../locus/locusSource';
 import { Packs } from './Packs';
 import { filterPlaces } from '../locus/placeFilter';
 import { featuredPlaces } from '../locus/featuredLaws';
@@ -72,7 +72,7 @@ export function CountryView(props: {
 
       {fr && (
         <section style={S.card}>
-          <p style={S.small}>{t(country === 'fr' ? 'license.legi' : country === 'it' ? 'license.normattiva' : country === 'ca' ? 'license.justiceCanada' : 'license.legalize', { date: (country === 'it' ? ITALY_LIST_DATE : country === 'ca' ? canadaListDate() : catalogueDate(country)) ?? '—', official: LEGALIZE_SOURCES[country]?.official ?? '—' })}</p>
+          <p style={S.small}>{t(country === 'fr' ? 'license.legi' : country === 'it' ? 'license.normattiva' : country === 'ca' ? 'license.justiceCanada' : COPIED_BY_MNEMOLAW.has(country) ? 'license.copied' : 'license.legalize', { date: (country === 'it' ? ITALY_LIST_DATE : country === 'ca' ? canadaListDate() : catalogueDate(country)) ?? '—', official: LEGALIZE_SOURCES[country]?.official ?? '—' })}</p>
           <button style={S.link} onClick={props.onOpenLicense}>{t('license.read')}</button>
         </section>
       )}

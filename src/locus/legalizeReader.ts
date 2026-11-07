@@ -153,8 +153,8 @@ export function articleHeading(heading: string): { label: string; rest: string; 
   return { label, rest, term };
 }
 
-/** Where the English `Article N` opens an article: EU regulations and the treaties. */
-const ENGLISH_ARTICLE = new Set(['eu', 'int']);
+/** Where the English `Article N` opens an article: EU regulations, the treaties and the Laws of Malta. */
+const ENGLISH_ARTICLE = new Set(['eu', 'int', 'mt']);
 
 /** The heading of a division of a law, in the languages read so far. */
 const DIVISION = /^(libro|titulo|capitulo|seccion|parte|primera|segunda|tercera|anexo|disposicion|book|part|title|chapter|section|schedule)\b/;
@@ -342,9 +342,10 @@ export function inlineArticles(text: string): LocusArticle[] {
 /** Raw URL of one file of a country repository. */
 export function legalizeFileUrl(country: string, path: string): string {
   const encoded = path.split('/').map(encodeURIComponent).join('/');
-  // The international treaties ship with the cartridge (`public/data/`, doc
-  // 134 §16.15): read from its own address, relative to the page.
-  if (country === 'int') return `data/${encoded}`;
+  // The international treaties (doc 134 §16.15) and the Laws of Malta
+  // (§16.16) ship with the cartridge (`public/data/`): read from its own
+  // address, relative to the page.
+  if (country === 'int' || country === 'mt') return `data/${encoded}`;
   return `${LEGALIZE_RAW}/legalize-${country}/main/${encoded}`;
 }
 

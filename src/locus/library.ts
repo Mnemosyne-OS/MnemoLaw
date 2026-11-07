@@ -17,6 +17,7 @@ import {
   LEGI_ATTRIBUTION, LEGI_LICENSE, LEGI_LICENSE_URL, LEGI_REPO_URL,
   LEGALIZE_SOURCES, LOCUS_ATTRIBUTION, LOCUS_LICENSE_URL, LOCUS_PUBLISHED, LOCUS_REPO_URL, LOCUS_VERSION,
   JUSTICE_CANADA_SOURCE, NORMATTIVA_SOURCE, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution,
+  COPIED_BY_MNEMOLAW,
 } from './locusSource';
 import type { LocusArticle, LocusPlace } from './locusReader';
 import { parsePack, type PackEntry } from './packImport';
@@ -159,7 +160,9 @@ export function attributionText(): string {
     '- Only the articles in force at the snapshot date are kept. Check the text in force on legifrance.gouv.fr.',
     '',
     ...Object.entries(LEGALIZE_SOURCES).flatMap(([cc, src]) => [
-      `## National laws (${cc.toUpperCase()}): Legalize (https://github.com/legalize-dev/legalize-${cc})`,
+      COPIED_BY_MNEMOLAW.has(cc)
+        ? `## National laws (${cc.toUpperCase()}): copied by MnemoLaw from ${src.checkAt}`
+        : `## National laws (${cc.toUpperCase()}): Legalize (https://github.com/legalize-dev/legalize-${cc})`,
       '',
       `- Attribution: ${legalizeAttribution(cc)}`,
       `- Not an official text. Check the text in force on ${src.checkAt}.`,
