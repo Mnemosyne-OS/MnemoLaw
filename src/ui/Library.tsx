@@ -13,10 +13,11 @@ import { parsePlaceFile } from '../locus/library';
 import type { LocusArticle } from '../locus/locusReader';
 import { cleanHeader, placeLabel } from '../locus/articleText';
 import { buildIndex, search } from '../locus/lawSearch';
-import { JUSTICE_CANADA_SOURCE, LEGALIZE_SOURCES, LOCUS_ATTRIBUTION, LOCUS_PUBLISHED, NORMATTIVA_SOURCE, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution } from '../locus/locusSource';
+import { FEDLEX_SOURCE, JUSTICE_CANADA_SOURCE, LEGALIZE_SOURCES, LOCUS_ATTRIBUTION, LOCUS_PUBLISHED, NORMATTIVA_SOURCE, fedlexAttribution, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution } from '../locus/locusSource';
 import { isLegalizeKey } from '../locus/legalizeCatalogue';
 import { isNormattivaKey } from '../locus/italyCatalogue';
 import { isJusticeKey } from '../locus/canadaCatalogue';
+import { isFedlexKey } from '../locus/swissCatalogue';
 
 export function Library({ t, places, readFile }: {
   t: T;
@@ -86,7 +87,13 @@ export function Library({ t, places, readFile }: {
                   {expanded === i && (
                     <>
                       <pre style={S.text}>{a.content}</pre>
-                      <div style={S.small}>{isJusticeKey(open.key)
+                      <div style={S.small}>{isFedlexKey(open.key)
+                        ? t(open.snapshot ? 'article.sourceLegalize' : 'article.sourceLegalizeUndated', {
+                          attr: fedlexAttribution(),
+                          date: open.snapshot ?? '—',
+                          at: FEDLEX_SOURCE.checkAt,
+                        })
+                        : isJusticeKey(open.key)
                         ? t('article.sourceLegalize', {
                           attr: justiceCanadaAttribution(),
                           date: open.snapshot ?? '—',

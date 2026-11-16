@@ -9,10 +9,10 @@ import type { LocusPlace } from '../locus/locusReader';
 export type T = (key: Key, vars?: Record<string, string | number>) => string;
 
 /** The countries MnemoLaw has a source for (doc 134 lots 1-3, then §16). */
-export type Country = 'us' | 'fr' | 'co' | 'es' | 'ar' | 'it' | 'pt' | 'uk' | 'ca' | 'eu' | 'mt' | 'int';
+export type Country = 'us' | 'fr' | 'co' | 'es' | 'ar' | 'it' | 'pt' | 'uk' | 'ca' | 'eu' | 'mt' | 'ch' | 'int';
 
 /** Every country with a source, in the order the home shows them. */
-export const COUNTRIES: readonly Country[] = ['int', 'eu', 'us', 'ca', 'fr', 'uk', 'co', 'es', 'ar', 'it', 'pt', 'mt'];
+export const COUNTRIES: readonly Country[] = ['int', 'eu', 'us', 'ca', 'fr', 'uk', 'co', 'es', 'ar', 'it', 'pt', 'mt', 'ch'];
 
 /** Which screen is shown. */
 export type View = { kind: 'home' } | { kind: 'country'; country: Country } | { kind: 'request' };

@@ -13,10 +13,12 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { sdk } from './host';
 import { useI18n } from './i18n/useI18n';
 import { translate } from './i18n/strings';
-import { JUSTICE_CANADA_SOURCE, LEGALIZE_SOURCES, LEGI_LICENSE_URL, LOCUS_LICENSE_URL, NORMATTIVA_SOURCE } from './locus/locusSource';
+import { FEDLEX_SOURCE, JUSTICE_CANADA_SOURCE, LEGALIZE_SOURCES, LEGI_LICENSE_URL, LOCUS_LICENSE_URL, NORMATTIVA_SOURCE } from './locus/locusSource';
 import { isNormattivaKey, italyLaws } from './locus/italyCatalogue';
 import { canadaLangOf, isJusticeKey, loadCanadaLaws } from './locus/canadaCatalogue';
 import { readCanadaAct } from './locus/justiceCanadaReader';
+import { isFedlexKey, loadSwissLaws, swissLangOf } from './locus/swissCatalogue';
+import { readSwissLaw } from './locus/fedlexReader';
 import { CONSTITUTION_ID, readConstitution, readNormattivaCode } from './locus/normattivaReader';
 import {
   fetchBytes, fetchJson, fetchText, openRemoteShard, postJson, openRemoteUrl, readPlaceArticles, readPlaceIndex, type LocusArticle, type LocusPlace,
@@ -151,6 +153,9 @@ export default function App() {
       } else if (country === 'ca') {
         const laws = await loadCanadaLaws();
         setPlacesBy((m) => ({ ...m, ca: laws }));
+      } else if (country === 'ch') {
+        const laws = await loadSwissLaws();
+        setPlacesBy((m) => ({ ...m, ch: laws }));
       } else if (isLazyCatalogue(country)) {
         const laws = await loadLegalizeLaws(country);
         setPlacesBy((m) => ({ ...m, [country]: laws }));
@@ -190,7 +195,14 @@ export default function App() {
       const onProgress = (p: { bytes: number }) => setJob({ kind: 'download', startedAt, bytes: p.bytes, place });
       let articles: LocusArticle[];
       let skippedBefore = 0;
-      if (isJusticeKey(place.key)) {
+      if (isFedlexKey(place.key)) {
+        // Fedlex: the version that applies today, one XML file per law and language.
+        const res = await readSwissLaw(fetchJson, fetchText, place.name, swissLangOf(place), { signal: ctrl.signal });
+        onProgress({ bytes: res.bytes });
+        articles = res.articles;
+        skippedBefore = res.repealed;
+        place = { ...place, snapshot: res.version };
+      } else if (isJusticeKey(place.key)) {
         // Justice Canada: one XML file per Act and language.
         const res = await readCanadaAct(fetchText, canadaLangOf(place), place.name, { signal: ctrl.signal });
         onProgress({ bytes: res.bytes });
@@ -341,6 +353,7 @@ export default function App() {
               : view.country === 'us' ? LOCUS_LICENSE_URL
                 : view.country === 'it' ? NORMATTIVA_SOURCE.licenceUrl
                   : view.country === 'ca' ? JUSTICE_CANADA_SOURCE.licenceUrl
+                  : view.country === 'ch' ? FEDLEX_SOURCE.licenceUrl
                   : LEGALIZE_SOURCES[view.country]?.licenceUrl ?? LOCUS_LICENSE_URL,
           )}
           onLoadPlaces={() => loadPlaces(view.country)}

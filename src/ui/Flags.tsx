@@ -125,6 +125,21 @@ export function FlagMT({ width = 48 }: { width?: number }) {
   );
 }
 
+/**
+ * Switzerland: a white cross on red. The flag is square, so it is drawn as a
+ * square as tall as the other flags, never stretched to 3:2.
+ */
+export function FlagCH({ width = 48 }: { width?: number }) {
+  const side = (width * 2) / 3;
+  return (
+    <svg width={side} height={side} viewBox="0 0 32 32" role="img" aria-hidden="true" style={{ borderRadius: 3, display: 'block' }}>
+      <rect width="32" height="32" fill="#DA291C" />
+      <rect x="13" y="6" width="6" height="20" fill="#FFFFFF" />
+      <rect x="6" y="13" width="20" height="6" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
 /** International treaties: a globe in white lines on UN blue (no state's flag). */
 export function FlagINT({ width = 48 }: { width?: number }) {
   return (
@@ -140,10 +155,11 @@ export function FlagINT({ width = 48 }: { width?: number }) {
 }
 
 /** The flag of a country MnemoLaw has a source for. */
-export function FlagOf({ country, width = 48 }: { country: 'us' | 'fr' | 'co' | 'es' | 'ar' | 'it' | 'pt' | 'uk' | 'ca' | 'eu' | 'mt' | 'int'; width?: number }) {
+export function FlagOf({ country, width = 48 }: { country: 'us' | 'fr' | 'co' | 'es' | 'ar' | 'it' | 'pt' | 'uk' | 'ca' | 'eu' | 'mt' | 'ch' | 'int'; width?: number }) {
   if (country === 'int') return <FlagINT width={width} />;
   if (country === 'eu') return <FlagEU width={width} />;
   if (country === 'mt') return <FlagMT width={width} />;
+  if (country === 'ch') return <FlagCH width={width} />;
   if (country === 'ca') return <FlagCA width={width} />;
   if (country === 'pt') return <FlagPT width={width} />;
   if (country === 'uk') return <FlagGB width={width} />;

@@ -16,7 +16,7 @@
 import {
   LEGI_ATTRIBUTION, LEGI_LICENSE, LEGI_LICENSE_URL, LEGI_REPO_URL,
   LEGALIZE_SOURCES, LOCUS_ATTRIBUTION, LOCUS_LICENSE_URL, LOCUS_PUBLISHED, LOCUS_REPO_URL, LOCUS_VERSION,
-  JUSTICE_CANADA_SOURCE, NORMATTIVA_SOURCE, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution,
+  JUSTICE_CANADA_SOURCE, NORMATTIVA_SOURCE, FEDLEX_SOURCE, fedlexAttribution, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution,
   COPIED_BY_MNEMOLAW,
 } from './locusSource';
 import type { LocusArticle, LocusPlace } from './locusReader';
@@ -178,6 +178,11 @@ export function attributionText(): string {
     `- Attribution: ${justiceCanadaAttribution()}`,
     `- Not an official text. Check the text in force on ${JUSTICE_CANADA_SOURCE.checkAt}.`,
     '',
+    '## Switzerland, federal laws: Fedlex (https://www.fedlex.admin.ch)',
+    '',
+    `- Attribution: ${fedlexAttribution()}`,
+    `- Not an official text. Check the text in force on ${FEDLEX_SOURCE.checkAt}.`,
+    '',
     'MnemoLaw does not give legal advice.',
     '',
   ].join('\n');
@@ -187,6 +192,9 @@ export function attributionText(): string {
 export function corpusOf(place: Pick<LocusPlace, 'type' | 'snapshot' | 'state'> & { key?: string }): { corpus: string; attribution: string } {
   if (place.key?.startsWith('justice|')) {
     return { corpus: `justice-canada${place.snapshot ? `-${place.snapshot}` : ''}`, attribution: justiceCanadaAttribution() };
+  }
+  if (place.key?.startsWith('fedlex|')) {
+    return { corpus: `fedlex${place.snapshot ? `-${place.snapshot}` : ''}`, attribution: fedlexAttribution() };
   }
   if (place.key?.startsWith('normattiva|')) {
     return { corpus: `normattiva${place.snapshot ? `-${place.snapshot}` : ''}`, attribution: normattivaAttribution() };

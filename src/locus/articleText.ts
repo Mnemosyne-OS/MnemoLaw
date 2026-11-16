@@ -6,7 +6,7 @@
  * date (doc 134 §2.1, §2.3): a chunk retrieved alone, months later, must
  * still say where it comes from and how old it is.
  */
-import { LEGALIZE_SOURCES, LEGI_ATTRIBUTION, LOCUS_ATTRIBUTION, LOCUS_PUBLISHED, JUSTICE_CANADA_SOURCE, NORMATTIVA_SOURCE, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution } from './locusSource';
+import { LEGALIZE_SOURCES, LEGI_ATTRIBUTION, LOCUS_ATTRIBUTION, LOCUS_PUBLISHED, JUSTICE_CANADA_SOURCE, NORMATTIVA_SOURCE, FEDLEX_SOURCE, fedlexAttribution, justiceCanadaAttribution, legalizeAttribution, normattivaAttribution } from './locusSource';
 import type { LocusArticle, LocusPlace } from './locusReader';
 
 /**
@@ -76,6 +76,11 @@ function isJustice(place: ChronicleUnit): boolean {
   return place.type === 'code' && (place.key?.startsWith('justice|') ?? false);
 }
 
+/** A Swiss federal law from Fedlex. */
+function isFedlex(place: ChronicleUnit): boolean {
+  return place.type === 'code' && (place.key?.startsWith('fedlex|') ?? false);
+}
+
 /** An Italian code from Normattiva. */
 function isNormattiva(place: ChronicleUnit): boolean {
   return place.type === 'code' && (place.key?.startsWith('normattiva|') ?? false);
@@ -99,7 +104,7 @@ function countryName(code: string): string {
  * article retrieved alone must say which one it is.
  */
 export function chronicleTitle(place: ChronicleUnit): string {
-  if (!isLegalize(place) && !isNormattiva(place) && !isJustice(place)) return placeLabel(place);
+  if (!isLegalize(place) && !isNormattiva(place) && !isJustice(place) && !isFedlex(place)) return placeLabel(place);
   const ref = place.reference ? `, ${place.reference}` : '';
   return `${placeLabel(place)} (${countryName(place.state)}${ref})`;
 }
@@ -109,6 +114,10 @@ export function sourceLine(place: ChronicleUnit, article: LocusArticle): string 
   if (isJustice(place)) {
     const asOf = place.snapshot ? `Current to ${place.snapshot}. ` : '';
     return `Source: ${justiceCanadaAttribution()}. ${asOf}Not an official text: check the text in force on ${JUSTICE_CANADA_SOURCE.checkAt}.`;
+  }
+  if (isFedlex(place)) {
+    const asOf = place.snapshot ? `Version in force on ${place.snapshot}. ` : '';
+    return `Source: ${fedlexAttribution()}. ${asOf}Not an official text: check the text in force on ${FEDLEX_SOURCE.checkAt}.`;
   }
   if (isNormattiva(place)) {
     const asOf = place.snapshot ? `Text in force as of ${place.snapshot}. ` : '';
@@ -141,6 +150,6 @@ export function articleChronicles(place: ChronicleUnit, article: LocusArticle): 
 
 /** sourceRef of one article (or of one part of it): the place key and its position. */
 export function articleRef(place: Pick<LocusPlace, 'key'>, index: number, part?: number): string {
-  const scheme = place.key.startsWith('legi|') ? 'legi' : place.key.startsWith('legalize|') ? 'legalize' : place.key.startsWith('normattiva|') ? 'normattiva' : place.key.startsWith('justice|') ? 'justice' : 'locus';
+  const scheme = place.key.startsWith('legi|') ? 'legi' : place.key.startsWith('legalize|') ? 'legalize' : place.key.startsWith('normattiva|') ? 'normattiva' : place.key.startsWith('justice|') ? 'justice' : place.key.startsWith('fedlex|') ? 'fedlex' : 'locus';
   return `${scheme}:${place.key}#${index}${part === undefined ? '' : `.${part}`}`;
 }

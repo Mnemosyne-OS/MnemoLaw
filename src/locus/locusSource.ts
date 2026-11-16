@@ -137,6 +137,21 @@ export function justiceCanadaAttribution(): string {
   return `${JUSTICE_CANADA_SOURCE.official} (justicecanada/laws-lois-xml), ${JUSTICE_CANADA_SOURCE.licence}`;
 }
 
+// ── Fedlex, Switzerland (doc 134 §16.17) ─────────────────────────────────
+// The Confederation's publication platform. Official enactments carry no
+// copyright in Switzerland (art. 5 of the Copyright Act, SR 231.1).
+export const FEDLEX_SOURCE: LegalizeSource = {
+  official: 'Fedlex (Federal Chancellery), Classified Compilation of federal law',
+  checkAt: 'fedlex.admin.ch',
+  licence: 'official enactments carry no copyright (art. 5 Copyright Act, SR 231.1)',
+  licenceUrl: 'https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en#art_5',
+};
+
+/** Attribution of Fedlex, one line. */
+export function fedlexAttribution(): string {
+  return `${FEDLEX_SOURCE.official}, ${FEDLEX_SOURCE.licence}`;
+}
+
 /** Attribution of Normattiva, one line. */
 export function normattivaAttribution(): string {
   return `${NORMATTIVA_SOURCE.official}, open data, ${NORMATTIVA_SOURCE.licence}`;

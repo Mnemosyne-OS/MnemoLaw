@@ -11,6 +11,7 @@
  * which the catalogues already order constitution first.
  */
 import type { LocusPlace } from './locusReader';
+import { swissLangFor } from './swissCatalogue';
 
 const FEATURED: Record<string, string[]> = {
   ca: [
@@ -71,6 +72,9 @@ export const FEATURED_MAX = 12;
  */
 export function featuredPlaces(places: readonly LocusPlace[], country: string, lang: string): LocusPlace[] {
   if (country === 'us') return [];
+  // Switzerland: its list is already ordered most asked first, in three
+  // languages; the tiles are the first laws in the app's language.
+  if (country === 'ch') return places.filter((p) => p.folder === swissLangFor(lang)).slice(0, FEATURED_MAX);
   const names = FEATURED[country];
   if (!names) return places.slice(0, FEATURED_MAX);
   const byLabel = new Map<string, LocusPlace>();
